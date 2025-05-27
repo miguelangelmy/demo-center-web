@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+<title>NTT DATA Spain Demo Center</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link href="styles/main.css" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-default">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div id="header-placeholder"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  });
+</script>
+<main class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8 bg-slate-50">
+<div class="layout-content-container flex flex-col max-w-5xl flex-1">
+<div class="flex flex-col sm:flex-row sm:justify-between gap-4 p-4 items-start mb-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-slate-900 text-4xl font-extrabold tracking-tight">Demo Center</h1>
+<p class="text-slate-600 text-base font-normal leading-relaxed max-w-xl">
+                  Explore our latest technology demonstrations and discover how NTT DATA Spain is driving innovation across industries.
+                </p>
+</div>
+</div>
+<div class="px-4 py-3 sticky top-0 bg-slate-50 z-10">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full shadow-sm border border-slate-200">
+<div class="text-slate-500 flex bg-white items-center justify-center pl-4 rounded-l-lg border-r border-slate-200">
+<span class="material-icons">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent border-none bg-white h-full placeholder:text-slate-400 px-4 text-base font-normal leading-normal" placeholder="Search for demos (e.g., Cloud Migration, AI Chatbots)" type="search" value=""/>
+</div>
+</label>
+</div>
+<div class="pb-3 border-b border-slate-200 mb-6">
+<div class="flex px-4 gap-6 overflow-x-auto">
+<a class="flex flex-col items-center justify-center border-b-2 border-b-blue-600 text-blue-600 pb-3 pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-semibold leading-normal">All</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-slate-500 hover:text-slate-700 hover:border-b-slate-300 pb-3 pt-4 whitespace-nowrap transition-colors" href="#">
+<p class="text-sm font-semibold leading-normal">Cloud</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-slate-500 hover:text-slate-700 hover:border-b-slate-300 pb-3 pt-4 whitespace-nowrap transition-colors" href="#">
+<p class="text-sm font-semibold leading-normal">AI</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-slate-500 hover:text-slate-700 hover:border-b-slate-300 pb-3 pt-4 whitespace-nowrap transition-colors" href="#">
+<p class="text-sm font-semibold leading-normal">Cybersecurity</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-slate-500 hover:text-slate-700 hover:border-b-slate-300 pb-3 pt-4 whitespace-nowrap transition-colors" href="#">
+<p class="text-sm font-semibold leading-normal">Data &amp; Analytics</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-slate-500 hover:text-slate-700 hover:border-b-slate-300 pb-3 pt-4 whitespace-nowrap transition-colors" href="#">
+<p class="text-sm font-semibold leading-normal">IoT</p>
+</a>
+</div>
+</div>
+<section>
+<h2 class="text-slate-800 text-2xl font-bold tracking-tight px-4 pb-4 pt-5">Featured Demos</h2>
+<div class="p-4 @container bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow duration-300">
+<div class="flex flex-col items-stretch justify-start @xl:flex-row @xl:items-start gap-6">
+<div class="w-full @xl:w-1/3 aspect-video bg-cover bg-center rounded-lg overflow-hidden group">
+<div class="relative w-full h-full">
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-opacity duration-300"></div>
+<button aria-label="Play Video: Cloud Migration Strategies" class="absolute inset-0 flex items-center justify-center text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300 focus:outline-none">
+<span class="material-icons text-6xl drop-shadow-lg">play_circle_filled</span>
+</button>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCF30nqnXLLM003EqzTIu-i69rbJdOVkl-_ci8ZBX1Bnd-U1b8h7Vuhxc3IO5xpcz8V6tnYKFBXljBMza6w2KolgkAYODHDa4q4MgwtTDLs_yuce49u232DTR1H5jnq8r0PJCXmKpSnahTzuCf15JlzrUKMRYrhN7L67aw4HMIiRXyn8i1JaMxB7h5O8o00Jw1DEdmfQQh7tPxZHVHtrurHAdo2Kw0WV3VZTZQm0pmLWMQXYsI7aOVCKlsgmo9Yotnok9kYWZEhqAY");'></div>
+</div>
+</div>
+<div class="flex w-full @xl:w-2/3 min-w-72 grow flex-col items-stretch justify-center gap-2 py-2 @xl:py-0">
+<h3 class="text-slate-900 text-xl font-semibold leading-tight">Cloud Migration Strategies</h3>
+<p class="text-slate-600 text-sm font-normal leading-relaxed">
+                      Learn how to seamlessly migrate your business to the cloud with our expert strategies and tools.
+                    </p>
+<div class="flex items-center text-xs text-slate-500 gap-3 mt-1">
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">event</span>
+<span>Recorded: July 15, 2024</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">schedule</span>
+<span>Duration: 30 minutes</span>
+</div>
+</div>
+<div class="mt-auto pt-3">
+<button class="flex items-center gap-2 min-w-[84px] max-w-[180px] cursor-pointer justify-center overflow-hidden rounded-md h-9 px-4 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium leading-normal transition-colors">
+<span class="material-icons text-lg">play_arrow</span>
+<span class="truncate">Watch Demo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-10">
+<h2 class="text-slate-800 text-2xl font-bold tracking-tight px-4 pb-4 pt-5">AI Solutions</h2>
+<div class="grid grid-cols-1 @lg:grid-cols-2 gap-6 p-4">
+<div class="bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+<div class="relative w-full aspect-video bg-cover bg-center group">
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-opacity duration-300"></div>
+<button aria-label="Play Video: AI-Powered Customer Service" class="absolute inset-0 flex items-center justify-center text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300 focus:outline-none">
+<span class="material-icons text-6xl drop-shadow-lg">play_circle_filled</span>
+</button>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnEjbyg5_TabyLhZsy3pAw6LUICnVXVhTmR5pUw0Kr64FYoTUe_VuKgQt1chCewn5GbNh3dHecc5Q26c-qahjGPmQH7cn740o4a-7RgZnBCcLjwsRFCf2ZQvaPNdQEwJP8DczemhfT273hYJ8XB3XtKI6xxQ8nd9ikJVidk5v7rkZfEfAyWwmoSWjnrdrYwlUhdFrE8DsYp3L--2kPtY7lOdMuLOVCVpx_HONB-b_k4HpeUwkmCo57dtKJ_UBEjdFIt6s8MayqDYw");'></div>
+</div>
+<div class="p-5">
+<h3 class="text-slate-900 text-lg font-semibold leading-tight mb-1">AI-Powered Customer Service</h3>
+<p class="text-slate-600 text-sm font-normal leading-relaxed mb-2 line-clamp-2">
+                      Discover how AI can transform your customer service with intelligent chatbots and personalized experiences.
+                    </p>
+<div class="flex items-center text-xs text-slate-500 gap-3 mb-3">
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">event</span>
+<span>Recorded: June 20, 2024</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">schedule</span>
+<span>Duration: 45 minutes</span>
+</div>
+</div>
+<button class="flex items-center gap-2 min-w-[84px] w-full sm:w-auto max-w-[180px] cursor-pointer justify-center overflow-hidden rounded-md h-9 px-4 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium leading-normal transition-colors">
+<span class="material-icons text-lg">play_arrow</span>
+<span class="truncate">Watch Demo</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+<div class="relative w-full aspect-video bg-cover bg-center group">
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-opacity duration-300"></div>
+<button aria-label="Play Video: AI-Driven Data Analytics" class="absolute inset-0 flex items-center justify-center text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300 focus:outline-none">
+<span class="material-icons text-6xl drop-shadow-lg">play_circle_filled</span>
+</button>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBH9DgTffMZpt_UIfGZk9uA4wttADhf3yiuJEd6jXeC2rH8BhPgUf4IdGDq6lxBJNIavAYgxEgqb7z09GIAbG-QcpD6tKz-L6_cqczruMKbD9zcAUBMqsF0i6GM9Oktc6dmLYF5aKXBotau7LJN9Z-lrPo6Z5oWxBHYevaNoO4con5mfxkshZueDF_403r_LZMVSGvqyoJQj5rEDZRW77llhEr1zGF7KJHbQjKxhBspBp38GVtIQbqsKrB6Cl0gAThwFnkomtN1IXw");'></div>
+</div>
+<div class="p-5">
+<h3 class="text-slate-900 text-lg font-semibold leading-tight mb-1">AI-Driven Data Analytics</h3>
+<p class="text-slate-600 text-sm font-normal leading-relaxed mb-2 line-clamp-2">
+                      Unlock the power of your data with AI-driven analytics for actionable insights and improved decision-making.
+                    </p>
+<div class="flex items-center text-xs text-slate-500 gap-3 mb-3">
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">event</span>
+<span>Recorded: May 22, 2024</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">schedule</span>
+<span>Duration: 60 minutes</span>
+</div>
+</div>
+<button class="flex items-center gap-2 min-w-[84px] w-full sm:w-auto max-w-[180px] cursor-pointer justify-center overflow-hidden rounded-md h-9 px-4 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium leading-normal transition-colors">
+<span class="material-icons text-lg">play_arrow</span>
+<span class="truncate">Watch Demo</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-10">
+<h2 class="text-slate-800 text-2xl font-bold tracking-tight px-4 pb-4 pt-5">Cybersecurity</h2>
+<div class="grid grid-cols-1 @lg:grid-cols-2 gap-6 p-4">
+<div class="bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+<div class="relative w-full aspect-video bg-cover bg-center group">
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-opacity duration-300"></div>
+<button aria-label="Play Video: Advanced Threat Detection" class="absolute inset-0 flex items-center justify-center text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300 focus:outline-none">
+<span class="material-icons text-6xl drop-shadow-lg">play_circle_filled</span>
+</button>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBpco1rFF4iS8dBZfKRiL-PRapElpozxh-_7Y-xsC5qFydozP9DVH1Tyywj5NF3TVBa3zC5Y5eBuV_gqg06a3if6441msi3TbGMnp36vOzE2mTFPRsLq94bWfmdNa6orRbXnMUP2SSQX44QQ1l8ED7emxlRLE_12WRYSvitkRfXr9uYCm12FCUbY5eTn5vHnk3pkxbuAgkRer67O3mMtEyxOAf8UNAJdC-dKyV6WPVlmZR5edGXBF03oUvwI1yxqHKEg1q1xmHYQdE");'></div>
+</div>
+<div class="p-5">
+<h3 class="text-slate-900 text-lg font-semibold leading-tight mb-1">Advanced Threat Detection</h3>
+<p class="text-slate-600 text-sm font-normal leading-relaxed mb-2 line-clamp-2">
+                      Protect your business from cyber threats with our advanced detection and response solutions.
+                    </p>
+<div class="flex items-center text-xs text-slate-500 gap-3 mb-3">
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">event</span>
+<span>Recorded: April 10, 2024</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">schedule</span>
+<span>Duration: 40 minutes</span>
+</div>
+</div>
+<button class="flex items-center gap-2 min-w-[84px] w-full sm:w-auto max-w-[180px] cursor-pointer justify-center overflow-hidden rounded-md h-9 px-4 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium leading-normal transition-colors">
+<span class="material-icons text-lg">play_arrow</span>
+<span class="truncate">Watch Demo</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+<div class="relative w-full aspect-video bg-cover bg-center group">
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-opacity duration-300"></div>
+<button aria-label="Play Video: Data Security and Compliance" class="absolute inset-0 flex items-center justify-center text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300 focus:outline-none">
+<span class="material-icons text-6xl drop-shadow-lg">play_circle_filled</span>
+</button>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9KqPnnq3903FoQD5i9_whh3DzTexiD3UJEoIWT6Y9RBBcdrKj0PLjPuvurZ2hezDhM47JDv_LSJLiox9B0UB8FfFoPYfADBwl3xAJCLCriekuRzcjPtqDRXqkiNHJ3q7JTwf-F_d8_2MYatQhku7Me0SkO7Nn_el_n_42ESukNOGNtJJ-9dnldE0KJoutBHJyvfPr1_Ikj08_Tw8vE_GI6I8HR-flKSvahiK0CbXcIFAeqaXOSf51Ve5YXjv1FH11JR_ytkZkDhk");'></div>
+</div>
+<div class="p-5">
+<h3 class="text-slate-900 text-lg font-semibold leading-tight mb-1">Data Security and Compliance</h3>
+<p class="text-slate-600 text-sm font-normal leading-relaxed mb-2 line-clamp-2">
+                      Ensure data security and compliance with our comprehensive solutions for data protection and regulatory adherence.
+                    </p>
+<div class="flex items-center text-xs text-slate-500 gap-3 mb-3">
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">event</span>
+<span>Recorded: March 5, 2024</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-sm">schedule</span>
+<span>Duration: 50 minutes</span>
+</div>
+</div>
+<button class="flex items-center gap-2 min-w-[84px] w-full sm:w-auto max-w-[180px] cursor-pointer justify-center overflow-hidden rounded-md h-9 px-4 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium leading-normal transition-colors">
+<span class="material-icons text-lg">play_arrow</span>
+<span class="truncate">Watch Demo</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<div id="footer-placeholder"></div>
+</div>
+</body></html>

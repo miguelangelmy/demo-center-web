@@ -1,0 +1,85 @@
+<html><head>
+<meta charset="utf-8"/>
+<title>NTT DATA Spain - About Us</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link rel="import" href="common-head.html">
+</head>
+<body class="bg-default">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div id="header-placeholder"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  });
+</script>
+<div class="layout-container flex h-full grow flex-col">
+<main class="flex-1 px-4 sm:px-8 md:px-16 lg:px-24 py-10">
+<div class="max-w-5xl mx-auto">
+<section class="text-center mb-16">
+<h1 class="text-4xl sm:text-5xl font-extrabold text-slate-800 mb-4 tracking-tight">
+                About <span class="gradient-text">NTT DATA Spain</span>
+</h1>
+<p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                NTT DATA Spain is a leading IT services provider, committed to innovation and client success. With a global presence and a focus on cutting-edge technologies, we deliver tailored solutions to meet the evolving needs of businesses across various industries.
+              </p>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+<div class="section-card">
+<div class="flex items-center mb-3">
+<span class="material-icons-outlined text-3xl text-[#1672CE] mr-3">flag</span>
+<h2 class="text-2xl font-bold text-slate-800">Our Mission</h2>
+</div>
+<p class="text-slate-600">
+                  To empower businesses with innovative technology solutions that drive growth, efficiency, and sustainability. We strive to be a trusted partner, delivering exceptional value and fostering long-term relationships.
+                </p>
+</div>
+<div class="section-card">
+<div class="flex items-center mb-3">
+<span class="material-icons-outlined text-3xl text-[#1672CE] mr-3">visibility</span>
+<h2 class="text-2xl font-bold text-slate-800">Our Vision</h2>
+</div>
+<p class="text-slate-600">
+                  To be a global leader in IT services, recognized for our expertise, innovation, and commitment to client success. We aim to shape the future of technology and create a positive impact on society.
+                </p>
+</div>
+<div class="section-card">
+<div class="flex items-center mb-3">
+<span class="material-icons-outlined text-3xl text-[#1672CE] mr-3">groups</span>
+<h2 class="text-2xl font-bold text-slate-800">Our Team</h2>
+</div>
+<p class="text-slate-600">
+                  Our team comprises experienced professionals with diverse backgrounds and expertise in various technologies. We foster a collaborative and inclusive environment, encouraging creativity and continuous learning.
+                </p>
+</div>
+<div class="section-card">
+<div class="flex items-center mb-3">
+<span class="material-icons-outlined text-3xl text-[#1672CE] mr-3">history</span>
+<h2 class="text-2xl font-bold text-slate-800">Our History</h2>
+</div>
+<p class="text-slate-600">
+                  Founded in 1967, NTT DATA has a rich history of innovation and client service. Over the years, we have expanded our global presence and capabilities, becoming a trusted partner for businesses worldwide.
+                </p>
+</div>
+</div>
+<section class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+<h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">NTT DATA <span class="gradient-text">Innovation Curve</span></h2>
+<div class="w-full aspect-[16/9] sm:aspect-[2/1] md:aspect-[3/2] rounded-lg overflow-hidden shadow-inner">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA95gdo1vgDqV2xDAHWlgG3103RdtpSTTmcckX9qt5psSMkGjds8UoqVxsYOXT6DewVNSqK80KDfTaKY6pr9pSafCac-UdWS9FmAnXHoz1A0zm8j1hLswC3vt9gC4lPrp3kOx8tfeNk-Ex8YXgG7WFO5eN63QpXXl7R2EcaB5jz9F1Tj4nhXyQ4KWsnQGVFPYCHs6aF202YeR3wIu-AeshS4K6PlqxxrOy3xxx-jOtMlZE5L7lZ8KlR5oVgW-MQygngFoP_-B3wo9M");'></div>
+</div>
+<p class="text-sm text-slate-500 mt-4 text-center">Visual representation of NTT DATA's approach to innovation, from ideation to market impact.</p>
+</section>
+</div>
+</main>
+<div id="footer-placeholder"></div>
+</div>
+</body></html>

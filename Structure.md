@@ -1,0 +1,17 @@
+- Life Sciences & Pharma
+- Retail
+- Travel, Transportation & Logistics
+    - Airlines
+    - Travel & Transportation
+    - Tourism
+    - Infrastructure
+    - Services
+- Manufacturing & Consumer Packaged Goods
+    - Manufacturing
+    - Agriculture
+    - Consumer Packaged Goods
+    - NRe
+- Auto
+- Energy & Utilities
+    - Utilities
+    - Energy

@@ -1,0 +1,276 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>NTT DATA Spain Demo Center</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="styles/main.css" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-default">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div id="header-placeholder"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  });
+</script>
+<div class="layout-container flex h-full grow flex-col">
+
+<main class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-8 md:py-12">
+<div class="layout-content-container flex flex-col max-w-screen-xl flex-1">
+<div class="text-center mb-8 md:mb-12">
+<h1 class="text-slate-800 text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-4">Demo Center</h1>
+<p class="text-slate-600 text-base md:text-lg font-normal leading-normal max-w-3xl mx-auto">
+                Explore our interactive showcase of cutting-edge technological solutions, tailored for various industries and powered by the latest advancements. Book a live demo or
+                delve into detailed information about each solution.
+              </p>
+</div>
+<div class="px-4 py-6 sticky top-0 bg-white z-10 shadow-sm rounded-lg mb-8">
+<div class="flex flex-col md:flex-row items-center gap-4">
+<label class="flex flex-col min-w-40 h-12 w-full md:w-auto md:flex-1">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-gray-300 focus-within:ring-2 focus-within:ring-[#1672ce] focus-within:border-[#1672ce]">
+<div class="text-slate-500 flex items-center justify-center pl-3 pr-2 bg-gray-50 rounded-l-lg border-r border-gray-300">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-slate-800 focus:outline-none border-none bg-white h-full placeholder:text-slate-500 px-3 text-base font-normal leading-normal" placeholder="Search solutions..." value=""/>
+</div>
+</label>
+<div class="flex border-b md:border-b-0 md:border-l border-gray-300 md:pl-4 gap-4 self-stretch">
+<button class="flex items-center gap-2 border-b-2 border-[#1672ce] text-[#1672ce] pb-2 pt-2 px-1 transition-colors hover:text-blue-700 hover:border-blue-700">
+<span class="material-symbols-outlined text-xl">business_center</span>
+<p class="text-sm font-semibold leading-normal tracking-[0.015em]">By Industry</p>
+</button>
+<button class="flex items-center gap-2 border-b-2 border-transparent text-slate-600 pb-2 pt-2 px-1 transition-colors hover:text-[#1672ce] hover:border-[#1672ce]">
+<span class="material-symbols-outlined text-xl">computer</span>
+<p class="text-sm font-semibold leading-normal tracking-[0.015em]">By Technology</p>
+</button>
+</div>
+</div>
+</div>
+<div class="flex gap-3 p-3 flex-wrap mb-8 justify-center">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-sky-100 text-[#1672ce] px-4 text-sm font-medium leading-normal hover:bg-sky-200 transition-colors">
+                Healthcare
+              </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 text-slate-700 px-4 text-sm font-medium leading-normal hover:bg-gray-200 transition-colors">
+                Finance
+              </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 text-slate-700 px-4 text-sm font-medium leading-normal hover:bg-gray-200 transition-colors">
+                Retail
+              </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 text-slate-700 px-4 text-sm font-medium leading-normal hover:bg-gray-200 transition-colors">
+                Manufacturing
+              </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 text-slate-700 px-4 text-sm font-medium leading-normal hover:bg-gray-200 transition-colors">
+                Energy
+              </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 text-slate-700 px-4 text-sm font-medium leading-normal hover:bg-gray-200 transition-colors">
+                Public Sector
+              </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 p-4 mb-12">
+<div class="flex flex-col gap-3 pb-3 rounded-lg shadow-lg overflow-hidden group bg-white hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAB76Hrw31U5DcU3D6RzpmfojRuGjVspE-6-BEoZTsBCqFyJoO-fjiRKYtgdlTPJX-y-8Cd8zSLZP_27rsyXTkb0YCbxha5sICFh7Mwt_z8EHoGbzgccR9_FnJdG1_rux33LSjUB5ELF0lZ0fmRT_2shtzFXDeg5jGZ8i_QOFJdgssw3GXxYFgX6I83aRTIcQlIUPYJswMa2CrkYMjt0SQFurJl1QYYwlUQJgEs9CzTSXjuJByrAN1tzEJiQ7riJgOgy-1z8vvOnuw");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+<button class="text-white bg-[#1672ce] hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                      View Details
+                    </button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-slate-800 text-lg font-semibold leading-normal mb-1">Smart Patient Care</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mb-2">Enhance patient outcomes with real-time data analytics and personalized care plans.</p>
+<div class="flex items-center text-xs text-slate-500 gap-2">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span>Success Metric: 20% Improvement</span>
+</div>
+<a class="text-xs text-[#1672ce] hover:underline mt-1 inline-flex items-center gap-1" href="#">
+                    Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg shadow-lg overflow-hidden group bg-white hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_Dq0AAq8Sb8xvNJU-lQ54HcUxngD7yV4b2hTXMRDCpped8xvnlnWPCLjKh_LxWfyhLkND4yBp85Iip7NizGoxSYvmbgoAR-fkk15IQzXBPOgFnJ8sk834gvN_q40Tlqhf27mHW8lFDRt9McYFERuvtbl_ENA_Ub9sMb4IvicfcrLVlFbrOkekJtHikeK3JMQZVx_-3rTZWJLOqv9KpsfXu14mpz4hAZdjkEiiWu77GkAWoQnxSJHcF7wmY8VO3TkNm2cwPR-FtyQ");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+<button class="text-white bg-[#1672ce] hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                      View Details
+                    </button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-slate-800 text-lg font-semibold leading-normal mb-1">AI-Powered Fraud Detection</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mb-2">Detect and prevent fraudulent activities using advanced AI algorithms.</p>
+<div class="flex items-center text-xs text-slate-500 gap-2">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>Success Metric: 99.9% Accuracy</span>
+</div>
+<a class="text-xs text-[#1672ce] hover:underline mt-1 inline-flex items-center gap-1" href="#">
+                    Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg shadow-lg overflow-hidden group bg-white hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBahthkpdRJQ7apknAWrO7m83aMEqwFepReVBUZx7L0zGhlB6E0mrVf54gEWisbxmCQawb7KtrNvs3l-zeAiKhju45h7gvD-rj9DoZHm4ry_K2o5icHaOx7UEKxTP7clN9frPeNBQN8AQLK7QdYkSpmnBdF-Euak73CSHWcCHDyj5LRcRIEhcdUkLW7-cmT29dMzx94kjiI0X604HyrtRS6Kf_t9qkTxhdAlBbtIodsbXex8orQI0tvcaPceHNbmCHPI__kaDixi-8");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+<button class="text-white bg-[#1672ce] hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                      View Details
+                    </button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-slate-800 text-lg font-semibold leading-normal mb-1">Personalized Shopping Experiences</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mb-2">Create tailored shopping experiences with AI-driven recommendations and customer insights.</p>
+<div class="flex items-center text-xs text-slate-500 gap-2">
+<span class="material-symbols-outlined text-sm">insights</span>
+<span>Success Metric: 15% Conversion Uplift</span>
+</div>
+<a class="text-xs text-[#1672ce] hover:underline mt-1 inline-flex items-center gap-1" href="#">
+                    Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg shadow-lg overflow-hidden group bg-white hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrLKb2tUeDTFvzKIDUp0tytnV5djfR162Jr78S5VOGyiZPjTn030yHHDcJuUfGIgZNgIEEO4BFfKzcX31SCCEmP3uS8tQOQVQR_R0vQZbv0ZfjV1cpnB7vXar38hQ4yb3033ry2sf6KhaCP9HsSF625SCZG1mvonkkRxNkKnbFwhf0jME351fTNJHS7n3V1wlfcuoIXGcQP-WsAG_GyJRFW8SLKbucQ3TfVT_4G6jU9JWXwK-HonHxZOFHrLCIfMyhdWlCuFinIts");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+<button class="text-white bg-[#1672ce] hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                      View Details
+                    </button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-slate-800 text-lg font-semibold leading-normal mb-1">Predictive Maintenance</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mb-2">Optimize equipment performance and reduce downtime with predictive maintenance solutions.</p>
+<div class="flex items-center text-xs text-slate-500 gap-2">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+<span>Success Metric: 30% Downtime Reduction</span>
+</div>
+<a class="text-xs text-[#1672ce] hover:underline mt-1 inline-flex items-center gap-1" href="#">
+                    Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg shadow-lg overflow-hidden group bg-white hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBkQZeDdDoyPmAULhYWb2CJRyZeU9tUoCbyuiVsHCDV7PSrmqKuuHlsXptnVcHjh1Vt9-firr-jw65yOhTkP6qz7LKs1I5WFtB-pN7s7m05YCFa-VRJXEqzx6bcEbPKkZ1K2LzsnIKG81QuKF-UIyE8FLPnM-4H4HJkkUDXZG4qXOXgeBgR1z-rnoXrugk02uEuBGQ79_xkQGQVF92DoWZzvu9_M41R1FR7y6ajUd28dmMds4m2V8pBHhnCVbzrO_T1JQE6nm9xLA");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+<button class="text-white bg-[#1672ce] hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                      View Details
+                    </button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-slate-800 text-lg font-semibold leading-normal mb-1">Renewable Energy Optimization</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mb-2">Maximize renewable energy production and grid efficiency with smart energy management systems.</p>
+<div class="flex items-center text-xs text-slate-500 gap-2">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span>Success Metric: 10% Efficiency Gain</span>
+</div>
+<a class="text-xs text-[#1672ce] hover:underline mt-1 inline-flex items-center gap-1" href="#">
+                    Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg shadow-lg overflow-hidden group bg-white hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCj1bBngNaOdZfGvfeDTi6nE1fVrtMMwX31HOtF7_9pDC0F8I3sZERpwT0h4obrXoDIou418peDcJpsTiTvhO6SeEBNBbs4hwDLSJo5jL0wP3TfCFea_VfniEsUIqffjBQfyHIpCsMj7OQCyWoiPllITr-olyEwfv2gqLLtyLYqVJiND5i-IioOZaS9hu-LdMrzqdoKVHWpESFVrbadmHQ1YUh0IVQ2M22dQEQjArghInuClrpUn2FuF7ETfC8U-xfhVT-Uz5edoKI");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+<button class="text-white bg-[#1672ce] hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                      View Details
+                    </button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-slate-800 text-lg font-semibold leading-normal mb-1">Citizen Services Platform</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mb-2">Improve citizen engagement and service delivery with a unified digital platform.</p>
+<div class="flex items-center text-xs text-slate-500 gap-2">
+<span class="material-symbols-outlined text-sm">groups</span>
+<span>Success Metric: 25% Faster Service</span>
+</div>
+<a class="text-xs text-[#1672ce] hover:underline mt-1 inline-flex items-center gap-1" href="#">
+                    Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<h2 class="text-slate-800 text-2xl md:text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 mb-6 text-center md:text-left">
+              Featured Solutions
+            </h2>
+<div class="flex overflow-x-auto pb-6 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-6">
+<div class="flex flex-col gap-4 rounded-lg min-w-[280px] md:min-w-[320px] bg-white shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsBtvuzqKAIf-rXVJ4YjELoAUye5WWx7tyrxKn2r7VEvan6ZKRS8d5Q3RlLQi8q-yvZauv5hjQ3Fu9Hqv-HZNNJMC72rLw0oRitMBbufwYLAKNxTup8kBeIMR7Nd-GBoijrQmgxmWFaIvn9i8tz91dOtUBMwgsglc6w2W8otXkShcLk8Q62KWBFL_7lq4WNNjF9sKA_Lr0IMZ7iVFBaxXTgKnodg9vJyTBhCd_INa2zo4emPjNHJBMEm5zuUj-RE39bmJPmG8arYI");'></div>
+<div class="p-4">
+<h3 class="text-slate-800 text-lg font-semibold leading-normal mb-1">Predictive Maintenance</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal">
+                      Optimize equipment performance and reduce downtime with predictive maintenance solutions.
+                    </p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg min-w-[280px] md:min-w-[320px] bg-white shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClIKr7I_Jp5bTFYRPWzaLwwp8gHdgDKIazQfvgr679OPz-uQ5o9i3StUL3I8-M4Y3zmZjPB42Yz2Z4dDoi6I9Ui4i7gWzKoDAQ0KKA-eLkPpOR-tnDOtHt7vdT-tMSDU6hx0EfAqECElW53KwJMtHzc1_E9pMMajwX8yWRqFoblwdauGCTbMlB6j7FDiObiphwHudB3whP0v8WnKx4lh3v34L26McScpziqe7JGwfRU4u_0s4x6EK0AAQoCKh1OY9j85UU0-BufNU");'></div>
+<div class="p-4">
+<h3 class="text-slate-800 text-lg font-semibold leading-normal mb-1">AI-Powered Fraud Detection</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal">Detect and prevent fraudulent activities using advanced AI algorithms.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg min-w-[280px] md:min-w-[320px] bg-white shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsXLA1pzIni0F9t9H-NAcG0JRXruWvrgxy-BKmdcsJOq9Q--Co4p8eGU_aa9t1k7ARevXJqUiC9v7TwqHXnJPoOe2OLc__M-MIZucwZaj7gQjj_x4B5GYzwkmSKCmGeklLklsJ6HgvRebhDqBwYBjGc_KK-iYKNyTYtHtzck5_S-zPu-EG94NXPcxwAu_hqJKm6WUHZZdsqhX0peFS42XzdiuZss_B-DyaF7J7AooOn6fAkbKLhYZOX6up1D-BIPChXV4M8vgbDaw");'></div>
+<div class="p-4">
+<h3 class="text-slate-800 text-lg font-semibold leading-normal mb-1">Personalized Shopping Experiences</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal">
+                      Create tailored shopping experiences with AI-driven recommendations and customer insights.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center py-8">
+<div class="flex flex-col sm:flex-row gap-4 px-4 w-full max-w-md">
+<button class="flex flex-1 min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-md h-12 px-6 bg-[#1672ce] text-white text-base font-semibold leading-normal tracking-[0.015em] hover:bg-blue-700 transition-colors">
+<span class="material-symbols-outlined">event_available</span>
+<span class="truncate">Book a Live Demo</span>
+</button>
+<button class="flex flex-1 min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-md h-12 px-6 bg-gray-100 text-slate-800 text-base font-semibold leading-normal tracking-[0.015em] hover:bg-gray-200 transition-colors border border-gray-300">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="truncate">View All Solutions</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<div id="footer-placeholder"></div>
+</div>
+</div>
+
+</body></html>

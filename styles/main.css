@@ -1,0 +1,120 @@
+/* Common styles for NTT DATA Demo Center */
+
+/* Font families */
+body {
+    font-family: "Work Sans", "Noto Sans", sans-serif;
+}
+
+/* Background colors */
+.bg-default {
+    background-color: #ffffff;
+}
+
+.bg-secondary {
+    background-color: #f8fafc; /* slate-50 */
+}
+
+/* Layout */
+.layout-container {
+    display: flex;
+    height: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.layout-content-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 64rem;
+    flex: 1;
+}
+
+/* Gradient effects */
+.gradient-text {
+    background: linear-gradient(90deg, #1672CE, #2E86DE);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-hero {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+/* Cards */
+.section-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Brand colors */
+.brand-primary {
+    color: #1672CE;
+}
+
+.brand-primary-bg {
+    background-color: #1672CE;
+}
+
+/* Common layout structure */
+.page-root {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(226 232 240);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+@media (min-width: 640px) {
+    .main-header {
+        padding: 1rem 2.5rem;
+    }
+}
+
+/* Navigation */
+.main-nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+.nav-link {
+    color: rgb(71 85 105);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #1672CE;
+}
+
+.nav-link-active {
+    color: #1672CE;
+    font-weight: 600;
+    border-bottom: 2px solid #1672CE;
+    padding-bottom: 0.25rem;
+}
