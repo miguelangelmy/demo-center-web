@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Noto+Serif%3Awght%40400%3B500%3B600%3B700%3B900&family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
   <title>NTT DATA Demo Center - Retail Industry</title>
   <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
@@ -39,60 +39,122 @@
   });
 </script>
   <div class="layout-container flex h-full grow flex-col">
-    <!-- Navigation Bar -->
-    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-200 px-10 py-4 shadow-sm">
-      <div class="flex items-center gap-3 text-slate-800">
-        <div class="size-7 text-blue-600">
-          <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_6_535)">
-              <path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
-            </g>
-          </svg>
-        </div>
-        <h1 class="text-slate-800 text-xl font-bold">NTT DATA Spain</h1>
+    <!-- Enhanced Breadcrumb -->
+    <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+      <div class="max-w-6xl mx-auto px-6 sm:px-10">
+        <nav class="flex py-4" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="../../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white transition-colors">
+                <span class="material-symbols-outlined mr-2">home</span>
+                Home
+              </a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                <a href="../index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Industries</a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                <span class="ml-1 text-sm font-medium text-slate-400">Retail</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
       </div>
-      <nav class="flex flex-1 justify-center gap-8">
-        <a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal transition-colors" href="../../index.html">Home</a>
-        <a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal transition-colors" href="../index.html">Industries</a>
-      </nav>
-    </header>
+    </div>
 
     <!-- Main Content -->
-    <main class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8 bg-slate-50">
+    <main class="px-4 sm:px-8 md:px-16 lg:px-24 flex flex-1 justify-center py-8">
       <div class="layout-content-container flex flex-col max-w-5xl flex-1">
-
         <!-- Industry Header -->
-        <section class="mb-12 text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-[#111418] sm:text-5xl">Retail Industry</h1>
-          <p class="mt-4 text-lg leading-8 text-gray-600">Explore how NTT DATA Spain is transforming the retail industry with innovative solutions.</p>
+        <section class="mb-8">
+          <h1 class="text-4xl font-bold tracking-tight text-[#111418] sm:text-5xl mb-4 font-['Noto_Serif']">Retail Industry</h1>
+          <p class="text-lg text-gray-600">
+            Discover our innovative solutions for the retail industry, enabling digital transformation and enhanced customer experiences.
+          </p>
         </section>
 
-        <!-- Featured Solutions -->
-        <section class="mb-16">
-          <h2 class="text-3xl font-bold tracking-tight text-[#111418] px-4 pb-6 pt-5">Featured Retail Solutions</h2>
-          <div class="space-y-12">
-            <!-- Solution 1 -->
-            <div class="p-4 @container">
-              <a href="../verticals/supplychain/index.html" class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-lg bg-white overflow-hidden transition-shadow hover:shadow-xl">
-                <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center rounded-t-xl @xl:rounded-l-xl @xl:rounded-t-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCdUejylbgTVEUVJhMnk1Qvp49Jgsm5HByrNxWYktdTgw217RY5hSkD2aWtGqvFXjT225y-f0y086i4kEwQ6wNI0i_qiQPJU46-fLyDbnfav-mHhmxOSNy2EbvGaNb7nj8yUqTmFiHT_WFMdJCftkL0EfvGg-NC5KMeU9ElmxoJcRtmdrrSrCsycFlVnI8Sek-Ww2nU9GgOD6pZBvLmlHlk0z9bjdE_S_vQ-GvlvtYx6a4NA_Qdx505iS_DhnYy5G4FnASAv40R_I")'></div>
-                <div class="flex w-full @xl:w-3/5 grow flex-col items-start justify-center gap-3 p-6 @xl:p-8">
-                  <h3 class="text-2xl font-semibold text-[#111418] leading-tight">Supply Chain Optimization</h3>
-                  <p class="text-[#637588] text-base font-normal leading-relaxed mb-2">
-                    Streamline your retail supply chain with advanced analytics and automation.
-                  </p>
-                </div>
-              </a>
+        <!-- Solutions Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex items-center mb-4">
+              <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">inventory_2</span>
+              <h3 class="text-xl font-semibold text-gray-900">Supply Chain Management</h3>
             </div>
+            <p class="text-gray-600">Advanced supply chain optimization and inventory management solutions.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex items-center mb-4">
+              <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">store</span>
+              <h3 class="text-xl font-semibold text-gray-900">Store Operations</h3>
+            </div>
+            <p class="text-gray-600">Digital solutions for modern store management and customer service.</p>
+          </div>
 
-            <!-- More solutions can be added here -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex items-center mb-4">
+              <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">analytics</span>
+              <h3 class="text-xl font-semibold text-gray-900">Customer Analytics</h3>
+            </div>
+            <p class="text-gray-600">Customer behavior analysis and personalization solutions.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex items-center mb-4">
+              <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">shopping_cart</span>
+              <h3 class="text-xl font-semibold text-gray-900">E-commerce</h3>
+            </div>
+            <p class="text-gray-600">Omnichannel retail solutions for seamless shopping experiences.</p>
           </div>
         </section>
 
+        <!-- Features Section -->
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 font-['Noto_Serif']">Key Features</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-center mb-4">
+                <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">monitoring</span>
+                <h3 class="text-xl font-semibold text-gray-900">Real-time Monitoring</h3>
+              </div>
+              <p class="text-gray-600">Track store performance and inventory in real-time.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-center mb-4">
+                <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">insights</span>
+                <h3 class="text-xl font-semibold text-gray-900">Predictive Analytics</h3>
+              </div>
+              <p class="text-gray-600">AI-powered insights for better decision making.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-center mb-4">
+                <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">smart_display</span>
+                <h3 class="text-xl font-semibold text-gray-900">Digital Integration</h3>
+              </div>
+              <p class="text-gray-600">Seamless integration of digital and physical channels.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-gray-50 rounded-xl p-8 text-center">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4 font-['Noto_Serif']">Ready to Transform Your Retail Business?</h2>
+          <p class="text-gray-600 mb-6">Contact us to learn more about our retail industry solutions.</p>
+          <button class="bg-[#1672ce] text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            Request a Demo
+          </button>
+        </section>
       </div>
     </main>
-
+    <div id="footer-placeholder"></div>
   </div>
 </div>
-<div id="footer-placeholder"></div>
 </body>
 </html>
