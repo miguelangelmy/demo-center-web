@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <title>NTT DATA Demo Center - Automotive</title>
+  <link href="../../styles/main.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-default">
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+    <div id="header-placeholder"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch('../../header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+          });
+
+        fetch('../../footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+          });
+      });
+    </script>
+
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Enhanced Breadcrumb -->
+      <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+        <div class="max-w-6xl mx-auto px-6 sm:px-10">
+          <nav class="flex py-4" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+              <li class="inline-flex items-center">
+                <a href="../../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white transition-colors">
+                  <span class="material-symbols-outlined mr-2">home</span>
+                  Home
+                </a>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                  <a href="../index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Industries</a>
+                </div>
+              </li>
+              <li aria-current="page">
+                <div class="flex items-center">
+                  <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                  <span class="ml-1 text-sm font-medium text-slate-400">Automotive</span>
+                </div>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <main class="px-4 sm:px-8 md:px-16 lg:px-24 flex flex-1 justify-center py-8">
+        <div class="layout-content-container flex flex-col max-w-5xl flex-1">
+          <!-- Industry Header -->
+          <section class="mb-8">
+            <h1 class="text-4xl font-bold tracking-tight text-[#111418] sm:text-5xl mb-4">Automotive Solutions</h1>
+            <p class="text-lg text-gray-600">
+              Discover our comprehensive solutions for the automotive industry, from manufacturing to connected vehicle technologies.
+            </p>
+          </section>
+
+          <!-- Solutions Grid -->
+          <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div class="flex items-center mb-4">
+                <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">manufacturing</span>
+                <h3 class="text-xl font-semibold text-gray-900">Smart Manufacturing</h3>
+              </div>
+              <p class="text-gray-600">Industry 4.0 solutions for automotive manufacturing optimization and automation.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div class="flex items-center mb-4">
+                <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">sensors</span>
+                <h3 class="text-xl font-semibold text-gray-900">Connected Vehicles</h3>
+              </div>
+              <p class="text-gray-600">IoT and connectivity solutions for modern vehicle systems and telematics.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div class="flex items-center mb-4">
+                <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">analytics</span>
+                <h3 class="text-xl font-semibold text-gray-900">Data Analytics</h3>
+              </div>
+              <p class="text-gray-600">Advanced analytics for predictive maintenance and performance optimization.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div class="flex items-center mb-4">
+                <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">electric_car</span>
+                <h3 class="text-xl font-semibold text-gray-900">Electric Vehicles</h3>
+              </div>
+              <p class="text-gray-600">Solutions for electric vehicle development, charging infrastructure, and battery management.</p>
+            </div>
+          </section>
+
+          <!-- Features Section -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                  <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">settings_suggest</span>
+                  <h3 class="text-xl font-semibold text-gray-900">Automation</h3>
+                </div>
+                <p class="text-gray-600">Advanced automation solutions for manufacturing processes.</p>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                  <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">hub</span>
+                  <h3 class="text-xl font-semibold text-gray-900">Integration</h3>
+                </div>
+                <p class="text-gray-600">Seamless integration of systems and technologies.</p>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                  <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">eco</span>
+                  <h3 class="text-xl font-semibold text-gray-900">Sustainability</h3>
+                </div>
+                <p class="text-gray-600">Green technologies and sustainable manufacturing practices.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Call to Action -->
+          <section class="bg-gray-50 rounded-xl p-8 text-center">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Automotive Business?</h2>
+            <p class="text-gray-600 mb-6">Contact us to learn more about our automotive industry solutions.</p>
+            <button class="bg-[#1672ce] text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Request a Demo
+            </button>
+          </section>
+        </div>
+      </main>
+      <div id="footer-placeholder"></div>
+    </div>
+  </div>
+</body>
+</html>

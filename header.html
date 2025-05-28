@@ -1,14 +1,23 @@
 <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-6 md:px-10 py-3 shadow-sm">
-<div class="flex items-center gap-3 text-slate-800">
-<img src="images/GlobalLogo_NTTDATA_FutureBlue_RGB.svg" alt="NTT DATA" class="w-40 md:w-48" />
+<!-- Logo Section (Left) -->
+<div class="flex items-center flex-none">
+  <a href="/home.html">
+    <img src="/images/GlobalLogo_NTTDATA_FutureBlue_RGB.svg" alt="NTT DATA" class="w-40 md:w-48" />
+  </a>
+</div>
 
-<nav class="hidden md:flex items-center gap-6">
-<a class="text-slate-700 hover:text-[#1672ce] text-sm font-medium leading-normal transition-colors" href="/industries">Industries</a>
-<a class="text-slate-700 hover:text-[#1672ce] text-sm font-medium leading-normal transition-colors" href="/solutions">Solutions</a>
-<a class="text-slate-700 hover:text-[#1672ce] text-sm font-medium leading-normal transition-colors" href="/contactus">Contact Us</a>
+<!-- Navigation Section (Center) -->
+<nav class="hidden md:flex items-center justify-center flex-1 px-6">
+  <div class="flex items-center gap-8">
+    <a class="text-slate-700 hover:text-[#1672ce] text-sm font-medium leading-normal transition-colors" href="/industries">Industries</a>
+    <a class="text-slate-700 hover:text-[#1672ce] text-sm font-medium leading-normal transition-colors" href="/solutions">Solutions</a>
+    <a class="text-slate-700 hover:text-[#1672ce] text-sm font-medium leading-normal transition-colors" href="/contactus">Contact Us</a>
+  </div>
 </nav>
-<div class="flex items-center gap-3">
-<div class="relative inline-block text-left" x-data="{ open: false, language: 'English' }">
+
+<!-- Actions Section (Right) -->
+<div class="flex items-center gap-4">
+  <div class="relative inline-block text-left" x-data="{ open: false, language: 'English' }">
   <button type="button" @click="open = !open" class="flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:text-[#1672ce] transition-colors">
     <span class="material-symbols-outlined text-base">language</span>
     <span x-text="language"></span>

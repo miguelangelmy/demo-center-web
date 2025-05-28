@@ -39,28 +39,31 @@
 </script>
   <div class="layout-container flex h-full grow flex-col">
 
-    <!-- Navigation Bar -->
-    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-200 px-10 py-4 shadow-sm">
-      <div class="flex items-center gap-3 text-slate-800">
-        <div class="size-7 text-blue-600">
-          <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_6_535)">
-              <path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
-            </g>
-          </svg>
-        </div>
-        <h1 class="text-slate-800 text-xl font-bold">NTT DATA Spain</h1>
+    <!-- Enhanced Breadcrumb -->
+    <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+      <div class="max-w-6xl mx-auto px-6 sm:px-10">
+        <nav class="flex py-4" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white transition-colors">
+                <span class="material-symbols-outlined mr-2">home</span>
+                Home
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                <span class="ml-1 text-sm font-medium text-slate-400">Industries</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
       </div>
-      <nav class="flex flex-1 justify-center gap-8">
-        <a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal transition-colors" href="../index.html">Home</a>
-        <a class="text-slate-700 hover:text-blue-600 text-sm font-medium leading-normal transition-colors" href="#">Industries</a>
-      </nav>
-    </header>
+    </div>
 
     <!-- Main Content -->
     <main class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8 bg-slate-50">
       <div class="layout-content-container flex flex-col max-w-5xl flex-1">
-
         <!-- Industries Header -->
         <section class="mb-12 text-center">
           <h1 class="text-4xl font-bold tracking-tight text-[#111418] sm:text-5xl">Industries</h1>
@@ -69,30 +72,72 @@
 
         <!-- Industry List -->
         <section class="mb-16">
-          <div class="space-y-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Life Sciences & Pharma -->
+            <a href="./lifesciences-pharma/index.html" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+              <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center rounded-t-xl @xl:rounded-l-xl @xl:rounded-t-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsfDIxe6yfklOxeH-_FzE_soBcypZjmu5LTrmQMoMQFYtLeURt0YNvg4IM81em8IItFiYmCIK7qhryIivfc4FtwxAJciClfStKFidpdxHf9cD4tgSnxwtvTIxygpHT_yz07NG7BZUzr4EXQeuSXFHpsLzs_BBSdaETlF-00YGtrGC-poeeBbrWB0SZ8nTRiYAVBhq64MI8vZee47yzvlXek5L2lWQinZ5o_5pPuba3uNuIFh7m6s97VAcH7syFaZ5hGJ6bPHqUubI")'></div>
+              <div class="flex w-full @xl:w-3/5 grow flex-col items-start justify-center gap-3 p-6 @xl:p-8">
+                <h2 class="text-2xl font-semibold text-[#111418] leading-tight">Life Sciences & Pharma</h2>
+                <p class="text-[#637588] text-base font-normal leading-relaxed mb-2">
+                  Innovative solutions for pharmaceutical companies and healthcare organizations, enhancing research and development processes.
+                </p>
+              </div>
+            </a>
 
-            <!-- Retail Industry Card -->
-            <a href="./retail/index.html" class="flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-shadow hover:shadow-xl">
+            <!-- Retail -->
+            <a href="./retail/index.html" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
               <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center rounded-t-xl @xl:rounded-l-xl @xl:rounded-t-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCdUejylbgTVEUVJhMnk1Qvp49Jgsm5HByrNxWYktdTgw217RY5hSkD2aWtGqvFXjT225y-f0y086i4kEwQ6wNI0i_qiQPJU46-fLyDbnfav-mHhmxOSNy2EbvGaNb7nj8yUqTmFiHT_WFMdJCftkL0EfvGg-NC5KMeU9ElmxoJcRtmdrrSrCsycFlVnI8Sek-Ww2nU9GgOD6pZBvLmlHlk0z9bjdE_S_vQ-GvlvtYx6a4NA_Qdx505iS_DhnYy5G4FnASAv40R_I")'></div>
               <div class="flex w-full @xl:w-3/5 grow flex-col items-start justify-center gap-3 p-6 @xl:p-8">
                 <h2 class="text-2xl font-semibold text-[#111418] leading-tight">Retail</h2>
                 <p class="text-[#637588] text-base font-normal leading-relaxed mb-2">
-                  Discover our innovative solutions for the retail industry, from supply chain optimization to customer experience enhancement.
+                  Transform the retail experience with our cutting-edge solutions for modern commerce and customer engagement.
                 </p>
               </div>
             </a>
 
-            <!-- Financial Services Industry Card -->
-            <a href="./financialservices/index.html" class="flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-shadow hover:shadow-xl">
-              <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center rounded-t-xl @xl:rounded-l-xl @xl:rounded-t-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9KqPnnq3903FoQD5i9_whh3DzTexiD3UJEoIWT6Y9RBBcdrKj0PLjPuvurZ2hezDhM47JDv_LSJLiox9B0UB8FfFoPYfADBwl3xAJCLCriekuRzcjPtqDRXqkiNHJ3q7JTwf-F_d8_2MYatQhku7Me0SkO7Nn_el_n_42ESukNOGNtJJ-9dnldE0KJoutBHJyvfPr1_Ikj08_Tw8vE_GI6I8HR-flKSvahiK0CbXcIFAeqaXOSf51Ve5YXjv1FH11JR_ytkZkDhk")'></div>
+            <!-- Travel, Transportation & Logistics -->
+            <a href="./travel-transportation-logistics/index.html" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+              <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center rounded-t-xl @xl:rounded-l-xl @xl:rounded-t-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8OmL0IbOuAhESBaGOadpeuGCAuBqOwiroevsIdPF9J4iknZqZhjcO4LHlKf2iaojgGUY9_Ue_cJSRG7W-WadnODUQ0fk4-Ly52NPzQh6u2vPIyl8mxFXjQgD8OCfCYfzUB2zzdLs27lvkyeXdjE-lqhuspJCA411R2SG6WFFkhCBaWOR8e_hSSl7iz8eAEYSs39vZPCCpa_5RpH4Y1i80AH6wlZuFsxOvh5NPgNhgUvt18__Q23iXAYeoR4cxkIRcnzaC0Yb69ag")'></div>
               <div class="flex w-full @xl:w-3/5 grow flex-col items-start justify-center gap-3 p-6 @xl:p-8">
-                <h2 class="text-2xl font-semibold text-[#111418] leading-tight">Financial Services</h2>
+                <h2 class="text-2xl font-semibold text-[#111418] leading-tight">Travel, Transportation & Logistics</h2>
                 <p class="text-[#637588] text-base font-normal leading-relaxed mb-2">
-                  Learn about our advanced financial solutions, including cybersecurity and data analytics.
+                  Comprehensive solutions for airlines, transportation, tourism, infrastructure, and logistics services.
                 </p>
               </div>
             </a>
 
+            <!-- Manufacturing & CPG -->
+            <a href="./manufacturing-cpg/index.html" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+              <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center rounded-t-xl @xl:rounded-l-xl @xl:rounded-t-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGBNtzHgybPmlpNMK9Tqvh0Z7U3qNuuAufONEjjtCMzXsTSu9WXEqHW9a7xystQtC8zO_AHvyamfswP7XjVXqJCqnGgBe0Z1V3a2lKZk4S-neGfFf7LqpcQ6HNzeJy8UrXDQOgGTwY_N-PrRtPxRJnl8KGTCjdhBElugmwbzQVbP9hzap8UYSGGdZKiA6xPXdK6thelu4CtKidPJBJjLgAoeFmViAuhSxFgJGSy_fDYYEmc8wppDOLQTbzyEw93jZv-5GFfHPeIRw")'></div>
+              <div class="flex w-full @xl:w-3/5 grow flex-col items-start justify-center gap-3 p-6 @xl:p-8">
+                <h2 class="text-2xl font-semibold text-[#111418] leading-tight">Manufacturing & Consumer Packaged Goods</h2>
+                <p class="text-[#637588] text-base font-normal leading-relaxed mb-2">
+                  Digital solutions for manufacturing, agriculture, consumer goods, and natural resources.
+                </p>
+              </div>
+            </a>
+
+            <!-- Auto -->
+            <a href="./auto/index.html" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+              <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center rounded-t-xl @xl:rounded-l-xl @xl:rounded-t-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUAbP3zWWntBRQMwSY7AeqGsRZk8iDpcm2zn6rVQk1tXLuzn1soOYUfce5Fj--FsS4LDQN5sRFT1zQWryUQ27TRy-6tRyxMQwjtcRvD7q7E7Q52jm2bBXp3vALKAZ1YFytLHA6Wgp9PmJWZ3yGIe7PWlEQ3piTzRcQzigNM1Uis4Ow8ZcGnw6n_RD0Y6JIWtRfy16fyOLFmoeWrOmPowWpHhiB6MFEqYMg14R_e_MtJE-H6vsu7_e0Jp_wKIjlJpBoFwCImLMVYj4")'></div>
+              <div class="flex w-full @xl:w-3/5 grow flex-col items-start justify-center gap-3 p-6 @xl:p-8">
+                <h2 class="text-2xl font-semibold text-[#111418] leading-tight">Auto</h2>
+                <p class="text-[#637588] text-base font-normal leading-relaxed mb-2">
+                  Advanced solutions for the automotive industry, from manufacturing to connected vehicle technologies.
+                </p>
+              </div>
+            </a>
+
+            <!-- Energy & Utilities -->
+            <a href="./energy-utilities/index.html" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+              <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center rounded-t-xl @xl:rounded-l-xl @xl:rounded-t-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBX8JYm_bwIqwPmie3JqCCqqN2cDoZ8v6KfWBPUJEM8YzfmysK5vjE0jYm4Vp5jpGEhoNejhCTa4uf1rSiQz7P4X9UB6LRXuN6qJCUtZY526LUij40IeHQdE0c9ryLzkBUzOYndGfw7wuH6XHmONLvRAGf49R2jWA_jbXyZLXw-HZ27z3zD5m4ZDjPlRh97a9K3DMyIIrk4bTJKAe-tctaybAn48EMQYrw0G1vXadaFb-XWtASP_AIMWb_1q-Hv31PyacguFvSnpv0")'></div>
+              <div class="flex w-full @xl:w-3/5 grow flex-col items-start justify-center gap-3 p-6 @xl:p-8">
+                <h2 class="text-2xl font-semibold text-[#111418] leading-tight">Energy & Utilities</h2>
+                <p class="text-[#637588] text-base font-normal leading-relaxed mb-2">
+                  Smart solutions for energy companies and utilities, enabling digital transformation and operational efficiency.
+                </p>
+              </div>
+            </a>
           </div>
         </section>
 

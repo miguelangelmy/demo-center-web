@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRE Solutions - NTT DATA Spain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <link href="../../../styles/main.css" rel="stylesheet"/>
+</head>
+<body class="bg-default">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div id="header-placeholder"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('../../../header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('header-placeholder').innerHTML = data;
+                    });
+
+                fetch('../../../footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    });
+            });
+        </script>
+
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="relative py-16 sm:py-20 md:py-24 bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+                <div class="max-w-6xl mx-auto px-6 sm:px-10">
+                    <div class="flex flex-col gap-6">
+                        <nav class="flex" aria-label="Breadcrumb">
+                            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                                <li class="inline-flex items-center">
+                                    <a href="../../../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white">
+                                        <span class="material-symbols-outlined mr-2">home</span>
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                        <a href="../../../" class="ml-1 text-sm font-medium text-slate-200 hover:text-white">Industries</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                        <a href="../" class="ml-1 text-sm font-medium text-slate-200 hover:text-white">Manufacturing & CPG</a>
+                                    </div>
+                                </li>
+                                <li aria-current="page">
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                        <span class="ml-1 text-sm font-medium text-slate-400">New & Renewable Energy</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </nav>
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight">New & Renewable Energy Solutions</h1>
+                        <p class="text-xl text-slate-300 max-w-3xl">Accelerate the transition to clean energy with our innovative digital solutions for renewable energy projects and sustainable development.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solutions Grid -->
+            <section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Solution Card 1 -->
+                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                <span class="material-symbols-outlined">solar_power</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Solar Energy Management</h3>
+                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Optimize solar power generation and distribution with smart monitoring and analytics.</p>
+                            </div>
+                        </div>
+
+                        <!-- Solution Card 2 -->
+                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                <span class="material-symbols-outlined">air</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Wind Farm Solutions</h3>
+                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Advanced systems for wind turbine management and performance optimization.</p>
+                            </div>
+                        </div>
+
+                        <!-- Solution Card 3 -->
+                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                <span class="material-symbols-outlined">battery_charging_full</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Energy Storage</h3>
+                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Smart battery management systems and energy storage solutions for renewable sources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10 bg-slate-50">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-8">Key Features</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="flex gap-4">
+                            <div class="text-[#1672ce] h-10 w-10 flex-shrink-0">
+                                <span class="material-symbols-outlined">monitoring</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Real-time Monitoring</h3>
+                                <p class="text-slate-600 mt-2">Continuous monitoring of renewable energy systems for optimal performance and early issue detection.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-[#1672ce] h-10 w-10 flex-shrink-0">
+                                <span class="material-symbols-outlined">insights</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Predictive Analytics</h3>
+                                <p class="text-slate-600 mt-2">Advanced analytics to forecast energy production and optimize resource allocation.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-[#1672ce] h-10 w-10 flex-shrink-0">
+                                <span class="material-symbols-outlined">smart_display</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Smart Grid Integration</h3>
+                                <p class="text-slate-600 mt-2">Seamless integration with smart grids for efficient energy distribution and management.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-[#1672ce] h-10 w-10 flex-shrink-0">
+                                <span class="material-symbols-outlined">eco</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Sustainability Metrics</h3>
+                                <p class="text-slate-600 mt-2">Track and report environmental impact and sustainability performance indicators.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="py-12 sm:py-16 px-6 sm:px-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-slate-900 text-2xl sm:text-3xl font-bold leading-tight tracking-tight mb-4">Ready to Transform Your Renewable Energy Projects?</h2>
+                    <p class="mt-4 text-slate-600 text-lg">Discover how our solutions can help you optimize renewable energy operations and drive sustainability.</p>
+                    <button class="mt-8 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#1672ce] hover:bg-sky-600 transition-colors duration-300">
+                        Contact Us
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+    </div>
+</body>
+</html>
