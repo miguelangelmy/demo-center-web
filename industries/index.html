@@ -17,6 +17,77 @@
                 'GRAD' 0,
                 'opsz' 24;
         }
+
+        @keyframes slow-ping {
+            75%, 100% {
+                transform: translate(-50%, -50%) scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        /* Estilos para los hotspots y tooltips */
+        .hotspot {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            pointer-events: none;
+        }
+
+        .ping-circle {
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
+
+        .ping-circle .ping-effect {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255, 0.8);
+            border-radius: 9999px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: slow-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        .ping-circle .dot {
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 9999px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .hotspot .hotspot-trigger {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            left: 0;
+            top: 0;
+            pointer-events: auto;
+            z-index: 15;
+        }
+
+        .tooltip {
+            pointer-events: none;
+            width: max-content;
+            max-width: 250px;
+            transform: translate(-50%, -10px);
+            transition: all 0.2s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .hotspot:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
 </head>
 <body class="bg-default">
@@ -68,6 +139,86 @@
         <section class="mb-12 text-center">
           <h1 class="text-4xl font-bold tracking-tight text-[#111418] sm:text-5xl">Industries</h1>
           <p class="mt-4 text-lg leading-8 text-gray-600">Explore how NTT DATA Spain is transforming various industries with innovative solutions.</p>
+        </section>
+
+        <!-- Interactive Map -->
+        <section class="mb-16 relative">
+          <div class="interactive-map-container relative max-w-4xl mx-auto mb-12">
+            <img src="../images/city-dioram.png" alt="Industry Map" class="w-full h-auto rounded-xl shadow-lg">
+            
+            <!-- Hotspots -->
+            <div class="hotspot absolute top-[25%] right-[25%] group">
+                <div class="hotspot-trigger rounded-full"></div>
+                <div class="ping-circle">
+                    <div class="ping-effect"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="tooltip bg-white p-3 rounded-lg shadow-lg absolute bottom-full mb-2 text-sm">
+                    <strong class="block text-blue-600 mb-1">Life Sciences & Pharma</strong>
+                    <p class="text-gray-600">Innovative solutions for healthcare and pharmaceutical industries.</p>
+                </div>
+            </div>
+
+            <div class="hotspot absolute top-[35%] left-[28%] group">
+                <div class="hotspot-trigger rounded-full"></div>
+                <div class="ping-circle">
+                    <div class="ping-effect"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="tooltip bg-white p-3 rounded-lg shadow-lg absolute bottom-full mb-2 text-sm">
+                    <strong class="block text-blue-600 mb-1">Retail</strong>
+                    <p class="text-gray-600">Digital transformation solutions for modern retail experiences.</p>
+                </div>
+            </div>
+
+            <a href="./travel-transportation-logistics/index.html" class="hotspot group absolute top-[15%] left-[18%]">
+                <div class="ping-circle">
+                    <div class="ping-effect"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="tooltip bg-white p-3 rounded-lg shadow-lg absolute bottom-full mb-2 text-sm">
+                    <strong>Travel & Transportation</strong>
+                    <p class="text-gray-600">Solutions for airlines, transportation, and logistics services</p>
+                </div>
+                <span class="hotspot-trigger"></span>
+            </a>
+
+            <a href="./manufacturing-cpg/index.html" class="hotspot group absolute bottom-[35%] right-[35%]">
+                <div class="ping-circle">
+                    <div class="ping-effect"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="tooltip bg-white p-3 rounded-lg shadow-lg absolute bottom-full mb-2 text-sm">
+                    <strong>Manufacturing & CPG</strong>
+                    <p class="text-xs text-gray-600">Digital solutions for manufacturing and consumer goods</p>
+                </div>
+                <span class="hotspot-trigger"></span>
+            </a>
+
+            <a href="./auto/index.html" class="hotspot group absolute bottom-[45%] left-[38%]">
+                <div class="ping-circle">
+                    <div class="ping-effect"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="tooltip bg-white p-3 rounded-lg shadow-lg absolute bottom-full mb-2 text-sm">
+                    <strong>Automotive</strong>
+                    <p class="text-xs text-gray-600">Advanced solutions for the automotive industry</p>
+                </div>
+                <span class="hotspot-trigger"></span>
+            </a>
+
+            <a href="./energy-utilities/index.html" class="hotspot group absolute bottom-[25%] right-[18%]">
+                <div class="ping-circle">
+                    <div class="ping-effect"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="tooltip bg-white p-3 rounded-lg shadow-lg absolute bottom-full mb-2 text-sm">
+                    <strong>Energy & Utilities</strong>
+                    <p class="text-xs text-gray-600">Smart solutions for energy companies and utilities</p>
+                </div>
+                <span class="hotspot-trigger"></span>
+            </a>
+          </div>
         </section>
 
         <!-- Industry List -->
