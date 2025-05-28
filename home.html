@@ -1,7 +1,7 @@
 <html><head>
 <meta charset="utf-8"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Serif%3Awght%40400%3B500%3B600%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
 <title>NTT DATA Demo Center</title>
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -108,7 +108,7 @@
                 <div class="relative h-full px-6 sm:px-10 flex flex-col items-center justify-center text-center">
                     <div class="max-w-3xl">
                         <h1 
-                            class="text-white text-4xl @[480px]:text-5xl @[768px]:text-6xl font-extrabold leading-tight tracking-tighter"
+                            class="text-white text-4xl @[480px]:text-5xl @[768px]:text-6xl font-extrabold leading-tight tracking-tighter font-['Noto_Serif']"
                             x-text="slide.title"
                         ></h1>
                         <p 
@@ -154,7 +154,7 @@
 <section class="py-8 sm:py-12 md:py-16 px-6 sm:px-10 @container">
 <div class="max-w-5xl mx-auto">
 <div class="text-center mb-6 md:mb-8">
-<h2 class="text-slate-900 text-3xl @[480px]:text-4xl font-bold leading-tight tracking-tight">Key Value Propositions</h2>
+<h2 class="text-slate-900 text-3xl @[480px]:text-4xl font-bold leading-tight tracking-tight font-['Noto_Serif']">Key Value Propositions</h2>
 <p class="mt-4 text-slate-600 text-lg font-normal leading-relaxed max-w-2xl mx-auto">Discover how our solutions can transform your business.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -194,44 +194,9 @@
 </div>
 </div>
 </section>
-<section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10 bg-slate-50">
-<div class="max-w-6xl mx-auto">
-<h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-8 md:mb-12 text-center sm:text-left">Explore Our Solutions</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="flex flex-col gap-4 group">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCaaqIITvIBGQTo9nzsrLDXGN82VfUdc4sWad5cX_YOAsKPZ6xvsblWS3fdcb4dmrBaIoc95hezkeeM8hrz5i1-sEeGoycdZAA_Np87Lzqn73iDd3KgzG9iZU-f-fQUjnrVnYz46fRX3YtQ7D-fRum-Al1t9wQFggWnBzo9PCyqRzoMYjVSPSFl5fwCqjbZLfllQgulk4rajZheRbG3pqLZ6Ek1v53rBS8DXVU-Y9MjMJa4xKsmB5JOcd8Zx5NfPhVTfZe8bOeyhUM");'></div>
-<div>
-<h3 class="text-slate-900 text-lg font-semibold leading-normal">Artificial Intelligence</h3>
-<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Harness the power of AI to automate processes, gain insights, and enhance decision-making.</p>
-</div>
-</div>
-<div class="flex flex-col gap-4 group">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8OmL0IbOuAhESBaGOadpeuGCAuBqOwiroevsIdPF9J4iknZqZhjcO4LHlKf2iaojgGUY9_Ue_cJSRG7W-WadnODUQ0fk4-Ly52NPzQh6u2vPIyl8mxFXjQgD8OCfCYfzUB2zzdLs27lvkyeXdjE-lqhuspJCA411R2SG6WFFkhCBaWOR8e_hSSl7iz8eAEYSs39vZPCCpa_5RpH4Y1i80AH6wlZuFsxOvh5NPgNhgUvt18__Q23iXAYeoR4cxkIRcnzaC0Yb69ag");'></div>
-<div>
-<h3 class="text-slate-900 text-lg font-semibold leading-normal">Cloud Computing</h3>
-<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Leverage cloud technologies for scalability, flexibility, and cost-efficiency.</p>
-</div>
-</div>
-<div class="flex flex-col gap-4 group">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGBNtzHgybPmlpNMK9Tqvh0Z7U3qNuuAufONEjjtCMzXsTSu9WXEqHW9a7xystQtC8zO_AHvyamfswP7XjVXqJCqnGgBe0Z1V3a2lKZk4S-neGfFf7LqpcQ6HNzeJy8UrXDQOgGTwY_N-PrRtPxRJnl8KGTCjdhBElugmwbzQVbP9hzap8UYSGGdZKiA6xPXdK6thelu4CtKidPJBJjLgAoeFmViAuhSxFgJGSy_fDYYEmc8wppDOLQTbzyEw93jZv-5GFfHPeIRw");'></div>
-<div>
-<h3 class="text-slate-900 text-lg font-semibold leading-normal">Cybersecurity</h3>
-<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Protect your business from cyber threats with our comprehensive security solutions.</p>
-</div>
-</div>
-<div class="flex flex-col gap-4 group">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUAbP3zWWntBRQMwSY7AeqGsRZk8iDpcm2zn6rVQk1tXLuzn1soOYUfce5Fj--FsS4LDQN5sRFT1zQWryUQ27TRy-6tRyxMQwjtcRvD7q7E7Q52jm2bBXp3vALKAZ1YFytLHA6Wgp9PmJWZ3yGIe7PWlEQ3piTzRcQzigNM1Uis4Ow8ZcGnw6n_RD0Y6JIWtRfy16fyOLFmoeWrOmPowWpHhiB6MFEqYMg14R_e_MtJE-H6vsu7_e0Jp_wKIjlJpBoFwCImLMVYj4");'></div>
-<div>
-<h3 class="text-slate-900 text-lg font-semibold leading-normal">Digital Transformation</h3>
-<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Transform your business with digital strategies and technologies.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
 <section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10">
 <div class="max-w-6xl mx-auto">
-<h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-8 md:mb-12 text-center sm:text-left">Industries We Serve</h2>
+<h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-8 md:mb-12 text-center sm:text-left font-['Noto_Serif']">Industries We Serve</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 <div class="flex flex-col gap-4 group">
 <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsfDIxe6yfklOxeH-_FzE_soBcypZjmu5LTrmQMoMQFYtLeURt0YNvg4IM81em8IItFiYmCIK7qhryIivfc4FtwxAJciClfStKFidpdxHf9cD4tgSnxwtvTIxygpHT_yz07NG7BZUzr4EXQeuSXFHpsLzs_BBSdaETlF-00YGtrGC-poeeBbrWB0SZ8nTRiYAVBhq64MI8vZee47yzvlXek5L2lWQinZ5o_5pPuba3uNuIFh7m6s97VAcH7syFaZ5hGJ6bPHqUubI");'></div>
@@ -264,10 +229,45 @@
 </div>
 </div>
 </section>
+<section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10 bg-slate-50">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-8 md:mb-12 text-center sm:text-left font-['Noto_Serif']">Explore Our Solutions</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCaaqIITvIBGQTo9nzsrLDXGN82VfUdc4sWad5cX_YOAsKPZ6xvsblWS3fdcb4dmrBaIoc95hezkeeM8hrz5i1-sEeGoycdZAA_Np87Lzqn73iDd3KgzG9iZU-f-fQUjnrVnYz46fRX3YtQ7D-fRum-Al1t9wQFggWnBzo9PCyqRzoMYjVSPSFl5fwCqjbZLfllQgulk4rajZheRbG3pqLZ6Ek1v53rBS8DXVU-Y9MjMJa4xKsmB5JOcd8Zx5NfPhVTfZe8bOeyhUM");'></div>
+<div>
+<h3 class="text-slate-900 text-lg font-semibold leading-normal">Artificial Intelligence</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Harness the power of AI to automate processes, gain insights, and enhance decision-making.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8OmL0IbOuAhESBaGOadpeuGCAuBqOwiroevsIdPF9J4iknZqZhjcO4LHlKf2iaojgGUY9_Ue_cJSRG7W-WadnODUQ0fk4-Ly52NPzQh6u2vPIyl8mxFXjQgD8OCfCYfzUB2zzdLs27lvkyeXdjE-lqhuspJCA411R2SG6WFFkhCBaWOR8e_hSSl7iz8eAEYSs39vZPCCpa_5RpH4Y1i80AH6wlZuFsxOvh5NPgNhgUvt18__Q23iXAYeoR4cxkIRcnzaC0Yb69ag");'></div>
+<div>
+<h3 class="text-slate-900 text-lg font-semibold leading-normal">Cloud Computing</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Leverage cloud technologies for scalability, flexibility, and cost-efficiency.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGBNtzHgybPmlpNMK9Tqvh0Z7U3qNuuAufONEjjtCMzXsTSu9WXEqHW9a7xystQtC8zO_AHvyamfswP7XjVXqJCqnGgBe0Z1V3a2lKZk4S-neGfFf7LqpcQ6HNzeJy8UrXDQOgGTwY_N-PrRtPxRJnl8KGTCjdhBElugmwbzQVbP9hzap8UYSGGdZKiA6xPXdK6thelu4CtKidPJBJjLgAoeFmViAuhSxFgJGSy_fDYYEmc8wppDOLQTbzyEw93jZv-5GFfHPeIRw");'></div>
+<div>
+<h3 class="text-slate-900 text-lg font-semibold leading-normal">Cybersecurity</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Protect your business from cyber threats with our comprehensive security solutions.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUAbP3zWWntBRQMwSY7AeqGsRZk8iDpcm2zn6rVQk1tXLuzn1soOYUfce5Fj--FsS4LDQN5sRFT1zQWryUQ27TRy-6tRyxMQwjtcRvD7q7E7Q52jm2bBXp3vALKAZ1YFytLHA6Wgp9PmJWZ3yGIe7PWlEQ3piTzRcQzigNM1Uis4Ow8ZcGnw6n_RD0Y6JIWtRfy16fyOLFmoeWrOmPowWpHhiB6MFEqYMg14R_e_MtJE-H6vsu7_e0Jp_wKIjlJpBoFwCImLMVYj4");'></div>
+<div>
+<h3 class="text-slate-900 text-lg font-semibold leading-normal">Digital Transformation</h3>
+<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Transform your business with digital strategies and technologies.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section class="py-16 sm:py-20 md:py-24 px-6 sm:px-10 @container bg-slate-50">
 <div class="max-w-3xl mx-auto">
 <div class="text-center">
-<h2 class="text-slate-900 text-3xl @[480px]:text-4xl font-bold leading-tight tracking-tight">Ready to Get Started?</h2>
+<h2 class="text-slate-900 text-3xl @[480px]:text-4xl font-bold leading-tight tracking-tight font-['Noto_Serif']">Ready to Get Started?</h2>
 <p class="mt-4 text-slate-600 text-lg font-normal leading-relaxed">
                   Request a demo or contact us to learn more about how NTT DATA Spain can help your business succeed.
                 </p>
