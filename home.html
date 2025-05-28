@@ -45,23 +45,115 @@
 <div class="page-root">
 <div class="layout-container flex h-full grow flex-col">
 <main class="flex-1">
-<section class="relative py-16 sm:py-24 md:py-32 @container">
-<div class="absolute inset-0 gradient-hero bg-cover bg-center"></div>
-<div class="relative px-6 sm:px-10 flex flex-col items-center text-center">
-<div class="max-w-3xl">
-<h1 class="text-white text-4xl @[480px]:text-5xl @[768px]:text-6xl font-extrabold leading-tight tracking-tighter">Welcome to the NTT DATA Spain Demo Center</h1>
-<p class="mt-6 text-slate-100 text-lg @[480px]:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
-                  Explore cutting-edge technological solutions tailored for your business needs. Our Demo Center showcases the latest innovations in AI, cloud computing, cybersecurity, and more.
-                </p>
-<button class="mt-10 flex min-w-[180px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 @[480px]:h-14 @[480px]:px-8 bg-[#1672ce] text-white text-base @[480px]:text-lg font-semibold leading-normal tracking-tight shadow-lg hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1672ce] transition-transform duration-150 ease-in-out hover:scale-105 mx-auto">
-<span class="truncate">Request a Demo</span>
-</button>
-</div>
-</div>
+<section class="relative py-8 sm:py-12 md:py-16 @container" x-data="{
+    slides: [
+        {
+            title: 'Welcome to NTT DATA Spain Demo Center',
+            description: 'Explore cutting-edge technological solutions tailored for your business needs. Our Demo Center showcases the latest innovations in AI, cloud computing, cybersecurity, and more.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNUGm0n0c-axQHfexJ_pvaElFDlCN10fxGujQlmI5HGrHkDnR1nXAxub_4Wg_3JHgW5Gz30YELbfb_wOivD7V_SPlHEPR49UuOUjQuFjOKhDovB_uRtoUHzO1eB6FWFe2P2NmEw7Kak4BO5Zb_iLtqCwIrM_yW1_zxsN_RT1LYoN9aCoaINadLD3YwRwlh1UID75B6yve-1K6NRrn4XPtlN2__8P_8RlWxUNOdyclBZL_6H4wP3az6Pw2nD6uv094tEvy72Fjpsrs',
+            cta: 'Request a Demo'
+        },
+        {
+            title: 'Latest AI Solutions Demo',
+            description: 'Experience our newest AI-powered solutions that are transforming businesses across industries. See real-world applications and measurable results.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCaaqIITvIBGQTo9nzsrLDXGN82VfUdc4sWad5cX_YOAsKPZ6xvsblWS3fdcb4dmrBaIoc95hezkeeM8hrz5i1-sEeGoycdZAA_Np87Lzqn73iDd3KgzG9iZU-f-fQUjnrVnYz46fRX3YtQ7D-fRum-Al1t9wQFggWnBzo9PCyqRzoMYjVSPSFl5fwCqjbZLfllQgulk4rajZheRbG3pqLZ6Ek1v53rBS8DXVU-Y9MjMJa4xKsmB5JOcd8Zx5NfPhVTfZe8bOeyhUM',
+            cta: 'Watch Demo'
+        },
+        {
+            title: 'Innovation Spotlight',
+            description: 'Discover how our latest technological breakthroughs are helping organizations achieve their digital transformation goals.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD8OmL0IbOuAhESBaGOadpeuGCAuBqOwiroevsIdPF9J4iknZqZhjcO4LHlKf2iaojgGUY9_Ue_cJSRG7W-WadnODUQ0fk4-Ly52NPzQh6u2vPIyl8mxFXjQgD8OCfCYfzUB2zzdLs27lvkyeXdjE-lqhuspJCA411R2SG6WFFkhCBaWOR8e_hSSl7iz8eAEYSs39vZPCCpa_5RpH4Y1i80AH6wlZuFsxOvh5NPgNhgUvt18__Q23iXAYeoR4cxkIRcnzaC0Yb69ag',
+            cta: 'Learn More'
+        }
+    ],
+    activeSlide: 0,
+    init() {
+        this.$watch('activeSlide', () => this.resetAutoplay())
+        this.autoplay()
+    },
+    autoplay() {
+        this.timer = setInterval(() => {
+            this.next()
+        }, 5000)
+    },
+    resetAutoplay() {
+        clearInterval(this.timer)
+        this.autoplay()
+    },
+    next() {
+        this.activeSlide = (this.activeSlide + 1) % this.slides.length
+    },
+    prev() {
+        this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length
+    }
+}">
+    <!-- Slides Container -->
+    <div class="relative h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
+        <template x-for="(slide, index) in slides" :key="index">
+            <div 
+                class="absolute inset-0 transition-all duration-1000 ease-in-out transform"
+                :class="{ 
+                    'opacity-100 translate-x-0': activeSlide === index,
+                    'opacity-0 translate-x-full': activeSlide < index,
+                    'opacity-0 -translate-x-full': activeSlide > index
+                }"
+            >
+                <!-- Background Image with Gradient -->
+                <div 
+                    class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+                    :style="'background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(' + slide.image + ')'"
+                ></div>
+                
+                <!-- Content -->
+                <div class="relative h-full px-6 sm:px-10 flex flex-col items-center justify-center text-center">
+                    <div class="max-w-3xl">
+                        <h1 
+                            class="text-white text-4xl @[480px]:text-5xl @[768px]:text-6xl font-extrabold leading-tight tracking-tighter"
+                            x-text="slide.title"
+                        ></h1>
+                        <p 
+                            class="mt-6 text-slate-100 text-lg @[480px]:text-xl font-normal leading-relaxed max-w-2xl mx-auto"
+                            x-text="slide.description"
+                        ></p>
+                        <button 
+                            class="mt-10 flex min-w-[180px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 @[480px]:h-14 @[480px]:px-8 bg-[#1672ce] text-white text-base @[480px]:text-lg font-semibold leading-normal tracking-tight shadow-lg hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1672ce] transition-transform duration-150 ease-in-out hover:scale-105 mx-auto"
+                        >
+                            <span class="truncate" x-text="slide.cta"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Navigation Controls -->
+        <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-3 z-10">
+            <template x-for="(slide, index) in slides" :key="index">
+                <button 
+                    @click="activeSlide = index"
+                    class="w-2.5 h-2.5 rounded-full transition-all duration-300"
+                    :class="activeSlide === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'"
+                ></button>
+            </template>
+        </div>
+
+        <!-- Previous/Next Buttons -->
+        <button 
+            @click="prev"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white transition-all duration-300"
+        >
+            <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button 
+            @click="next"
+            class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white transition-all duration-300"
+        >
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+    </div>
 </section>
-<section class="py-16 sm:py-20 md:py-24 px-6 sm:px-10 @container">
+<section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10 @container">
 <div class="max-w-5xl mx-auto">
-<div class="text-center mb-12 md:mb-16">
+<div class="text-center mb-8 md:mb-12">
 <h2 class="text-slate-900 text-3xl @[480px]:text-4xl font-bold leading-tight tracking-tight">Key Value Propositions</h2>
 <p class="mt-4 text-slate-600 text-lg font-normal leading-relaxed max-w-2xl mx-auto">Discover how our solutions can transform your business.</p>
 </div>
