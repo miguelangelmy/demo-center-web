@@ -2,4 +2,3 @@
 *.zip
 node_modules/
 .vscode/*
-!.vscode/mcp.json
