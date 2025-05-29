@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900" rel="stylesheet" as="style" onload="this.rel='stylesheet'"/>
+    <title>Tourism Solutions - NTT DATA Demo Center</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <link href="../../../styles/main.css" rel="stylesheet"/>
+</head>
+<body class="bg-default">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div id="header-placeholder"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('header-placeholder').innerHTML = data;
+                    });
+
+                fetch('/footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    });
+            });
+        </script>
+
+        <main class="flex-1">
+            <!-- Enhanced Breadcrumb -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-16 sm:py-20 md:py-24">
+                <div class="max-w-6xl mx-auto px-6 sm:px-10">
+                    <div class="flex flex-col gap-6">
+                        <nav class="flex" aria-label="Breadcrumb">
+                            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                                <li class="inline-flex items-center">
+                                    <a href="../../../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white transition-colors">
+                                        <span class="material-symbols-outlined mr-2">home</span>
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                        <a href="../../index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Industries</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                        <a href="../index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Travel & Transportation</a>
+                                    </div>
+                                </li>
+                                <li aria-current="page">
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                        <span class="ml-1 text-sm font-medium text-slate-400">Tourism</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </nav>
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight">Tourism Solutions</h1>
+                        <p class="text-xl text-slate-300 max-w-3xl">Transform your tourism business with innovative digital solutions that enhance visitor experiences and optimize operations through the following processes:</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Processes Grid -->
+            <section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Process Card 1 -->
+                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                <span class="material-symbols-outlined">map</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Destination Management</h3>
+                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Smart solutions for managing tourist destinations, attractions, and experiences.</p>
+                            </div>
+                        </div>
+
+                        <!-- Process Card 2 -->
+                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Booking & Reservations</h3>
+                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Streamlined booking systems for accommodations, activities, and transportation.</p>
+                            </div>
+                        </div>
+
+                        <!-- Process Card 3 -->
+                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                <span class="material-symbols-outlined">support_agent</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Guest Experience</h3>
+                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Enhanced visitor experiences with personalized services and digital guides.</p>
+                            </div>
+                        </div>
+
+                        <!-- Process Card 4 -->
+                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                <span class="material-symbols-outlined">payments</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Payment Solutions</h3>
+                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Secure and flexible payment systems for all tourism services.</p>
+                            </div>
+                        </div>
+
+                        <!-- Process Card 5 -->
+                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                <span class="material-symbols-outlined">analytics</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Analytics & Insights</h3>
+                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Data-driven decision making for tourism businesses and destinations.</p>
+                            </div>
+                        </div>
+
+                        <!-- Process Card 6 -->
+                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                <span class="material-symbols-outlined">campaign</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Marketing & Promotion</h3>
+                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Digital marketing solutions to attract and engage visitors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10 bg-slate-50">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-8">Key Features</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="flex gap-4">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full flex-shrink-0">
+                                <span class="material-symbols-outlined">phone_android</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Mobile-First Experience</h3>
+                                <p class="text-slate-600 mt-2">Seamless mobile experiences for travelers with interactive guides and real-time updates.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full flex-shrink-0">
+                                <span class="material-symbols-outlined">diversity_3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Personalization</h3>
+                                <p class="text-slate-600 mt-2">Tailored recommendations and experiences based on visitor preferences and behavior.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full flex-shrink-0">
+                                <span class="material-symbols-outlined">insights</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Real-time Analytics</h3>
+                                <p class="text-slate-600 mt-2">Comprehensive insights into visitor behavior and business performance.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full flex-shrink-0">
+                                <span class="material-symbols-outlined">cloud_done</span>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Cloud Integration</h3>
+                                <p class="text-slate-600 mt-2">Scalable cloud-based solutions for seamless operations across all touchpoints.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-16 sm:py-20 md:py-24 px-6 sm:px-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight">Transform Your Tourism Business</h2>
+                    <p class="mt-4 text-slate-600 text-lg">Discover how our digital solutions can help you create exceptional experiences for your visitors.</p>
+                    <button class="mt-8 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#1672ce] hover:bg-sky-600 transition-colors duration-300">
+                        Contact Us
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+    </div>
+</body>
+</html>
