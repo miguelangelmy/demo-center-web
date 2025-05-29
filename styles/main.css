@@ -49,6 +49,30 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('../fonts/Noto Serif/NotoSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('../fonts/Noto Serif/NotoSerif-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('../fonts/Noto Serif/NotoSerif-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Font families */
 body {
     font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -212,4 +236,15 @@ body {
     .section-image {
         height: auto;
     }
+}
+
+/* Typography - Headings */
+.page-title {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+}
+
+.section-title {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
 }
