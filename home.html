@@ -16,6 +16,20 @@
           'GRAD' 0,
           'opsz' 24;
       }
+
+      /* Ocultar scrollbar pero mantener la funcionalidad */
+      .scrollbar-hide {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+      }
+
+      /* Asegurar scroll suave */
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
 </style>
 <style>
       .gradient-hero {
@@ -45,7 +59,7 @@
 <div class="page-root">
 <div class="layout-container flex h-full grow flex-col">
 <main class="flex-1">
-<section class="relative py-4 sm:py-6 md:py-0 @container" x-data="{
+<section class="relative py-2 sm:py-4 md:py-0 @container" x-data="{
     slides: [
         {
             title: 'Welcome to NTT DATA Spain Demo Center',
@@ -94,8 +108,8 @@
                 class="absolute inset-0 transition-all duration-1000 ease-in-out transform"
                 :class="{ 
                     'opacity-100 translate-x-0': activeSlide === index,
-                    'opacity-0 translate-x-full': activeSlide < index,
-                    'opacity-0 -translate-x-full': activeSlide > index
+                    'opacity-0 translate-x-full': (activeSlide === slides.length - 1 && index === 0) || (activeSlide < index && !(activeSlide === 0 && index === slides.length - 1)),
+                    'opacity-0 -translate-x-full': (activeSlide === 0 && index === slides.length - 1) || (activeSlide > index && !(activeSlide === slides.length - 1 && index === 0))
                 }"
             >
                 <!-- Background Image with Gradient -->
@@ -151,9 +165,9 @@
         </button>
     </div>
 </section>
-<section class="py-8 sm:py-12 md:py-16 px-6 sm:px-10 @container">
+<section class="py-6 sm:py-8 md:py-12 px-6 sm:px-10 @container">
 <div class="max-w-5xl mx-auto">
-<div class="text-center mb-6 md:mb-8">
+<div class="text-center mb-4 md:mb-6">
 <h2 class="text-slate-900 text-3xl @[480px]:text-4xl font-bold leading-tight tracking-tight font-['Noto_Serif']">Key Value Propositions</h2>
 <p class="mt-4 text-slate-600 text-lg font-normal leading-relaxed max-w-2xl mx-auto">Discover how our solutions can transform your business.</p>
 </div>
@@ -194,44 +208,117 @@
 </div>
 </div>
 </section>
-<section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10">
-<div class="max-w-6xl mx-auto">
-<h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-8 md:mb-12 text-center sm:text-left font-['Noto_Serif']">Industries We Serve</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="flex flex-col gap-4 group">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsfDIxe6yfklOxeH-_FzE_soBcypZjmu5LTrmQMoMQFYtLeURt0YNvg4IM81em8IItFiYmCIK7qhryIivfc4FtwxAJciClfStKFidpdxHf9cD4tgSnxwtvTIxygpHT_yz07NG7BZUzr4EXQeuSXFHpsLzs_BBSdaETlF-00YGtrGC-poeeBbrWB0SZ8nTRiYAVBhq64MI8vZee47yzvlXek5L2lWQinZ5o_5pPuba3uNuIFh7m6s97VAcH7syFaZ5hGJ6bPHqUubI");'></div>
-<div>
-<h3 class="text-slate-900 text-lg font-semibold leading-normal">Healthcare</h3>
-<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Improve patient care and operational efficiency with our healthcare solutions.</p>
-</div>
-</div>
-<div class="flex flex-col gap-4 group">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOqHlXd2nJoomlnXFgQ-WqaOyjqAO9eHeuXaPaYLlJcWCsJHzXxRinsO7-1c1mghh5qqNH7JkS-lpdkfZZjHImI39ewSBrYq-1LwOAHtoVKcRYuE0dpfamMset0vJr2DfQ2vEH_WLNuf21qDTGgzGLHr546AcQov3rAn1_WVCGwe2BMF9MAC7nKLKBKiwdpnmYQ0DHCxqU9e_5P78jFDc6OdeQfQKmxpwN4K4Zfrm8fB7sp0p83Hxu01-EvZhqdxALVq0fSG8R5fw");'></div>
-<div>
-<h3 class="text-slate-900 text-lg font-semibold leading-normal">Finance</h3>
-<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Enhance financial services with innovative technologies and secure platforms.</p>
-</div>
-</div>
-<div class="flex flex-col gap-4 group">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqiV4TbJI8u0wYegjdIrzGlz0GiMQO5xj-4F1tGu7eRpOFtBEQnEoBJdi3zvLzbOYaIozu9BW6dmy8eme5PlzE3r3NojuF7On8pIB_TZmSdjTK0UQ_CeClvA1hkA-mjaI7YfUOCR25EU3ccZAt-9QNJQcMRY0q-HPsQnQ2N4C-pziLBU4OUvr4YqlAJaYvBAEQOp3qPDx7SCGBfBLB6mwePP0i-3YLLPHsKq1GnnyROna0drCfvI_fswheWLvdC6UOz6Sr1kD32rM");'></div>
-<div>
-<h3 class="text-slate-900 text-lg font-semibold leading-normal">Retail</h3>
-<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Transform the retail experience with personalized solutions and seamless customer journeys.</p>
-</div>
-</div>
-<div class="flex flex-col gap-4 group">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBX8JYm_bwIqwPmie3JqCCqqN2cDoZ8v6KfWBPUJEM8YzfmysK5vjE0jYm4Vp5jpGEhoNejhCTa4uf1rSiQz7P4X9UB6LRXuN6qJCUtZY526LUij40IeHQdE0c9ryLzkBUzOYndGfw7wuH6XHmONLvRAGf49R2jWA_jbXyZLXw-HZ27z3zD5m4ZDjPlRh97a9K3DMyIIrk4bTJKAe-tctaybAn48EMQYrw0G1vXadaFb-XWtASP_AIMWb_1q-Hv31PyacguFvSnpv0");'></div>
-<div>
-<h3 class="text-slate-900 text-lg font-semibold leading-normal">Manufacturing</h3>
-<p class="text-slate-600 text-sm font-normal leading-normal mt-1">Optimize manufacturing processes with smart technologies and data-driven insights.</p>
-</div>
-</div>
-</div>
-</div>
+<section class="py-8 sm:py-10 md:py-12 px-6 sm:px-10" x-data="{
+    currentIndex: 0,
+    industries: [
+        {
+            title: 'Healthcare',
+            description: 'Improve patient care and operational efficiency with our healthcare solutions.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDsfDIxe6yfklOxeH-_FzE_soBcypZjmu5LTrmQMoMQFYtLeURt0YNvg4IM81em8IItFiYmCIK7qhryIivfc4FtwxAJciClfStKFidpdxHf9cD4tgSnxwtvTIxygpHT_yz07NG7BZUzr4EXQeuSXFHpsLzs_BBSdaETlF-00YGtrGC-poeeBbrWB0SZ8nTRiYAVBhq64MI8vZee47yzvlXek5L2lWQinZ5o_5pPuba3uNuIFh7m6s97VAcH7syFaZ5hGJ6bPHqUubI',
+            link: 'industries/lifesciences-pharma/'
+        },
+        {
+            title: 'Finance',
+            description: 'Enhance financial services with innovative technologies and secure platforms.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAOqHlXd2nJoomlnXFgQ-WqaOyjqAO9eHeuXaPaYLlJcWCsJHzXxRinsO7-1c1mghh5qqNH7JkS-lpdkfZZjHImI39ewSBrYq-1LwOAHtoVKcRYuE0dpfamMset0vJr2DfQ2vEH_WLNuf21qDTGgzGLHr546AcQov3rAn1_WVCGwe2BMF9MAC7nKLKBKiwdpnmYQ0DHCxqU9e_5P78jFDc6OdeQfQKmxpwN4K4Zfrm8fB7sp0p83Hxu01-EvZhqdxALVq0fSG8R5fw',
+            link: 'industries/financialservices/'
+        },
+        {
+            title: 'Retail',
+            description: 'Transform the retail experience with personalized solutions and seamless customer journeys.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCqiV4TbJI8u0wYegjdIrzGlz0GiMQO5xj-4F1tGu7eRpOFtBEQnEoBJdi3zvLzbOYaIozu9BW6dmy8eme5PlzE3r3NojuF7On8pIB_TZmSdjTK0UQ_CeClvA1hkA-mjaI7YfUOCR25EU3ccZAt-9QNJQcMRY0q-HPsQnQ2N4C-pziLBU4OUvr4YqlAJaYvBAEQOp3qPDx7SCGBfBLB6mwePP0i-3YLLPHsKq1GnnyROna0drCfvI_fswheWLvdC6UOz6Sr1kD32rM',
+            link: 'industries/retail/'
+        },
+        {
+            title: 'Manufacturing',
+            description: 'Optimize manufacturing processes with smart technologies and data-driven insights.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBX8JYm_bwIqwPmie3JqCCqqN2cDoZ8v6KfWBPUJEM8YzfmysK5vjE0jYm4Vp5jpGEhoNejhCTa4uf1rSiQz7P4X9UB6LRXuN6qJCUtZY526LUij40IeHQdE0c9ryLzkBUzOYndGfw7wuH6XHmONLvRAGf49R2jWA_jbXyZLXw-HZ27z3zD5m4ZDjPlRh97a9K3DMyIIrk4bTJKAe-tctaybAn48EMQYrw0G1vXadaFb-XWtASP_AIMWb_1q-Hv31PyacguFvSnpv0',
+            link: 'industries/manufacturing-cpg/'
+        },
+        {
+            title: 'Energy & Utilities',
+            description: 'Drive sustainability and efficiency in energy production and distribution.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCOyt8_qEybJZbgrapujvHiodcXTAeg32Q5CHcIvWEetb1YggegbhcebSZcjuvF01euG8ZWPc5BO3ZXmxfER9X0pFAfiMlWkOE4Lh4s1XQ0GshcLHrQgPbc9MNZgk7L',
+            link: 'industries/energy-utilities/'
+        },
+        {
+            title: 'Life Sciences',
+            description: 'Accelerate research and development with cutting-edge technology solutions.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA80mgTRPJhDULhtgm_nR2tVdoNXFZUEV5Mig6HMxBXry4LxsK_kbwaPFa_TnwJJTEzyD0HLkTTLnvTlWzL9v1j',
+            link: 'industries/lifesciences-pharma/'
+        },
+        {
+            title: 'Travel & Transportation',
+            description: 'Transform mobility and logistics with intelligent transportation solutions.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAfR-E_5ClPdCfXoSi8E_HeoR6GZ3MwJ1houxrsDoU5QXzmk4Qd16l4e1pKfPTzChyH1cSX1G7qd7brHt4rqy8',
+            link: 'industries/travel-transportation-logistics/'
+        },
+        {
+            title: 'Agriculture',
+            description: 'Modernize farming with smart agriculture and precision farming solutions.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCfb4C-x8uX_B0kQrCwUhKzV_3oeMpjkSvDXLT42stHL54HTx4-PerC8XofELa4HY_O_gVCci4tL_FvviZVRxBnKw',
+            link: 'industries/manufacturing-cpg/agriculture/'
+        }
+    ],
+    init() {
+        this.startAutoScroll();
+    },
+    startAutoScroll() {
+        const startTime = performance.now();
+        const animate = () => {
+            const currentTime = performance.now();
+            const elapsed = (currentTime - startTime) * 0.05; // Aumentada la velocidad a 0.05
+            const cardWidth = 320 + 32; // card width + gap
+            
+            // Calculate the position using modulo to create infinite loop effect
+            const position = elapsed % (cardWidth * this.industries.length);
+            this.currentIndex = Math.floor(position / cardWidth);
+            
+            // Apply smooth transform
+            const container = this.$refs.carousel;
+            if (container) {
+                container.style.transform = `translateX(-${position}px)`;
+            }
+            
+            requestAnimationFrame(animate);
+        };
+        
+        requestAnimationFrame(animate);
+    },
+    next() {
+        // These methods are kept for manual navigation
+        this.currentIndex = (this.currentIndex + 1) % (this.industries.length);
+    },
+    prev() {
+        this.currentIndex = (this.currentIndex - 1 + this.industries.length) % this.industries.length;
+    }
+}">
+    <div class="w-full">
+        <h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-6 md:mb-8 text-center sm:text-left font-['Noto_Serif'] max-w-6xl mx-auto">Industries We Serve</h2>
+        <div class="relative max-w-[1440px] mx-auto">
+            <!-- Cards container -->
+            <div class="overflow-hidden px-4">
+                <div class="flex gap-8" x-ref="carousel">
+                    <!-- Duplicate the items to create seamless infinite scroll -->
+                    <template x-for="(industry, index) in [...industries, ...industries]" :key="index">
+                        <a :href="industry.link" class="flex-none w-80 flex flex-col gap-4 group py-4 hover:no-underline">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform origin-center group-hover:scale-105 transition-transform duration-300"
+                                 :style="'background-image: url(' + industry.image + ')'">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-500 transition-colors duration-300" x-text="industry.title"></h3>
+                                <p class="text-gray-600" x-text="industry.description"></p>
+                            </div>
+                        </a>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-<section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10 bg-slate-50">
+<section class="py-8 sm:py-10 md:py-12 px-6 sm:px-10 bg-slate-50">
 <div class="max-w-6xl mx-auto">
-<h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-8 md:mb-12 text-center sm:text-left font-['Noto_Serif']">Explore Our Solutions</h2>
+<h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-6 md:mb-8 text-center sm:text-left font-['Noto_Serif']">Explore Our Solutions</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 <div class="flex flex-col gap-4 group">
 <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden shadow-md transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCaaqIITvIBGQTo9nzsrLDXGN82VfUdc4sWad5cX_YOAsKPZ6xvsblWS3fdcb4dmrBaIoc95hezkeeM8hrz5i1-sEeGoycdZAA_Np87Lzqn73iDd3KgzG9iZU-f-fQUjnrVnYz46fRX3YtQ7D-fRum-Al1t9wQFggWnBzo9PCyqRzoMYjVSPSFl5fwCqjbZLfllQgulk4rajZheRbG3pqLZ6Ek1v53rBS8DXVU-Y9MjMJa4xKsmB5JOcd8Zx5NfPhVTfZe8bOeyhUM");'></div>
@@ -264,7 +351,7 @@
 </div>
 </div>
 </section>
-<section class="py-16 sm:py-20 md:py-24 px-6 sm:px-10 @container bg-slate-50">
+<section class="py-8 sm:py-10 md:py-12 px-6 sm:px-10 @container bg-slate-50">
 <div class="max-w-3xl mx-auto">
 <div class="text-center">
 <h2 class="text-slate-900 text-3xl @[480px]:text-4xl font-bold leading-tight tracking-tight font-['Noto_Serif']">Ready to Get Started?</h2>
