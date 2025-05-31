@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>NTT DATA Industry Demo Center - Events</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body class="bg-default">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div id="header-placeholder"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  });
+</script>
+<div class="layout-container flex h-full grow flex-col">
+<main class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-8 bg-gray-50">
+<div class="layout-content-container flex flex-col max-w-5xl flex-1 space-y-8">
+    <!-- Hero Section -->
+    <section class="relative text-center bg-cover bg-center py-16 md:py-24 rounded-xl shadow-lg overflow-hidden" style="background-image: url('/images/city-dioram.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay for better text readability -->
+        <div class="relative z-10">
+            <h1 class="text-white tracking-tight text-4xl font-bold leading-tight">Upcoming Events</h1>
+            <p class="text-gray-200 text-lg font-normal leading-relaxed mt-4 max-w-3xl mx-auto">
+                Join us for our upcoming webinars, workshops, and exclusive events. Discover the latest in technology and innovation with NTT DATA.
+            </p>
+        </div>
+    </section>
+
+    <!-- Upcoming Events List -->
+    <section class="space-y-6">
+        <h2 class="text-gray-800 text-2xl font-semibold leading-tight tracking-tight mb-4">Event Schedule</h2>
+
+        <!-- Event Item 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Webinar: The Future of AI in Manufacturing</h3>
+            <p class="text-sm text-gray-500 mb-1">Date: July 15, 2025 | Time: 10:00 AM CET</p>
+            <p class="text-sm text-gray-500 mb-3">Type: Webinar</p>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Explore how Artificial Intelligence is revolutionizing the manufacturing industry, from smart factories to predictive maintenance.
+            </p>
+            <a href="register.html?event=Webinar%3A%20The%20Future%20of%20AI%20in%20Manufacturing" class="inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1672ce] text-white text-sm font-semibold leading-normal tracking-wide shadow-md hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 no-underline">
+                <span class="truncate">Register</span>
+            </a>
+        </div>
+
+        <!-- Event Item 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Workshop: Mastering Cloud-Native Architectures</h3>
+            <p class="text-sm text-gray-500 mb-1">Date: August 5, 2025 | Time: 9:00 AM - 4:00 PM CET</p>
+            <p class="text-sm text-gray-500 mb-3">Type: Workshop (In-person - Madrid Lab)</p>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                A hands-on workshop designed for developers and architects looking to deepen their understanding of cloud-native principles and practices. Limited seats available.
+            </p>
+            <a href="register.html?event=Workshop%3A%20Mastering%20Cloud-Native%20Architectures" class="inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1672ce] text-white text-sm font-semibold leading-normal tracking-wide shadow-md hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 no-underline">
+                <span class="truncate">Register</span>
+            </a>
+        </div>
+
+        <!-- Event Item 3 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">NTT DATA at Tech Innovate Summit 2025</h3>
+            <p class="text-sm text-gray-500 mb-1">Date: September 20-22, 2025</p>
+            <p class="text-sm text-gray-500 mb-3">Type: Public Event (Sponsorship)</p>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Visit our booth at the Tech Innovate Summit. We'll be showcasing our latest solutions and participating in keynote sessions.
+            </p>
+            <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1672ce] text-white text-sm font-semibold leading-normal tracking-wide shadow-md hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                <span class="truncate">Learn More & Register</span>
+            </button>
+        </div>
+
+         <!-- Event Item 4 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Partner Event: Innovate with [Partner Name]</h3>
+            <p class="text-sm text-gray-500 mb-1">Date: October 10, 2025 | Time: 2:00 PM CET</p>
+            <p class="text-sm text-gray-500 mb-3">Type: Partner Event (Online)</p>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Join us and our valued partner, [Partner Name], for an insightful session on collaborative innovation and digital transformation.
+            </p>
+            <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1672ce] text-white text-sm font-semibold leading-normal tracking-wide shadow-md hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                <span class="truncate">Register via Partner</span>
+            </button>
+        </div>
+
+    </section>
+</div>
+</main>
+<div id="footer-placeholder"></div>
+</div>
+</body>
+</html>

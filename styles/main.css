@@ -242,9 +242,52 @@ body {
 .page-title {
     font-family: 'Noto Serif', serif;
     font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    color: #111418;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+    .page-title {
+        font-size: 3rem;
+    }
+}
+
+.industry-title {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    color: #111418;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+    .industry-title {
+        font-size: 3rem;
+    }
 }
 
 .section-title {
     font-family: 'Noto Serif', serif;
     font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: #111418;
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: #111418;
+}
+
+/* Material Icons custom styles */
+.material-symbols-outlined {
+    line-height: 1;
+    vertical-align: middle;
 }
