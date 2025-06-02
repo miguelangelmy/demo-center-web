@@ -18,32 +18,28 @@
         selectedVertical: '',
         industries: {
           'auto': {
-            name: 'Automotive',
-            verticals: ['Supply Chain', 'Manufacturing Operations', 'Customer Experience']
+            name: 'Auto',
+            verticals: []
           },
           'energy-utilities': {
             name: 'Energy & Utilities',
-            verticals: ['Grid Management', 'Customer Operations', 'Sustainability']
-          },
-          'financialservices': {
-            name: 'Financial Services',
-            verticals: ['Banking', 'Insurance', 'Capital Markets']
+            verticals: ['Utilities', 'Energy']
           },
           'lifesciences-pharma': {
             name: 'Life Sciences & Pharma',
-            verticals: ['Research & Development', 'Clinical Trials', 'Manufacturing']
+            verticals: []
           },
           'manufacturing-cpg': {
-            name: 'Manufacturing & CPG',
-            verticals: ['Supply Chain', 'Manufacturing Operations', 'Quality Control']
+            name: 'Manufacturing & Consumer Packaged Goods',
+            verticals: ['Manufacturing', 'Agriculture', 'Consumer Packaged Goods', 'NRe']
           },
           'retail': {
             name: 'Retail',
-            verticals: ['Supply Chain', 'Store Operations', 'Customer Experience']
+            verticals: []
           },
           'travel-transportation-logistics': {
             name: 'Travel, Transportation & Logistics',
-            verticals: ['Fleet Management', 'Passenger Experience', 'Logistics Operations']
+            verticals: ['Airlines', 'Travel & Transportation', 'Tourism', 'Infrastructure', 'Services']
           }
         },
         solutions: [
@@ -52,7 +48,7 @@
             title: 'Supply Chain Management',
             description: 'End-to-end supply chain optimization and visibility platform',
             industry: 'retail',
-            vertical: 'Supply Chain',
+            vertical: '',
             image: 'https://placehold.co/600x400?text=Supply+Chain',
             recordings: 2,
             whitepapers: 1
@@ -62,7 +58,7 @@
             title: 'Smart Manufacturing Operations',
             description: 'AI-powered manufacturing optimization and predictive maintenance',
             industry: 'manufacturing-cpg',
-            vertical: 'Manufacturing Operations',
+            vertical: 'Manufacturing',
             image: 'https://placehold.co/600x400?text=Smart+Manufacturing',
             recordings: 3,
             whitepapers: 2
@@ -72,7 +68,7 @@
             title: 'Intelligent Grid Management',
             description: 'Smart grid optimization and renewable energy integration',
             industry: 'energy-utilities',
-            vertical: 'Grid Management',
+            vertical: 'Energy',
             image: 'https://placehold.co/600x400?text=Grid+Management',
             recordings: 1,
             whitepapers: 3
@@ -82,7 +78,7 @@
             title: 'Clinical Trials Management',
             description: 'Digital transformation of clinical trials processes',
             industry: 'lifesciences-pharma',
-            vertical: 'Clinical Trials',
+            vertical: '',
             image: 'https://placehold.co/600x400?text=Clinical+Trials',
             recordings: 2,
             whitepapers: 2
@@ -92,7 +88,7 @@
             title: 'Intelligent Fleet Management',
             description: 'Real-time fleet monitoring and optimization',
             industry: 'travel-transportation-logistics',
-            vertical: 'Fleet Management',
+            vertical: 'Travel & Transportation',
             image: 'https://placehold.co/600x400?text=Fleet+Management',
             recordings: 2,
             whitepapers: 1
@@ -112,25 +108,25 @@
             title: 'Automotive Manufacturing Excellence',
             description: 'Next-generation automotive manufacturing solutions',
             industry: 'auto',
-            vertical: 'Manufacturing Operations',
+            vertical: '',
             image: 'https://placehold.co/600x400?text=Automotive+Manufacturing',
             recordings: 2,
             whitepapers: 2
           }
         ],
-        
+
         get filteredSolutions() {
           return this.solutions.filter(solution => {
-            const matchesSearch = this.searchQuery === '' || 
+            const matchesSearch = this.searchQuery === '' ||
               solution.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
               solution.description.toLowerCase().includes(this.searchQuery.toLowerCase());
-            
-            const matchesIndustry = this.selectedIndustry === '' || 
+
+            const matchesIndustry = this.selectedIndustry === '' ||
               solution.industry === this.selectedIndustry;
-            
-            const matchesVertical = this.selectedVertical === '' || 
+
+            const matchesVertical = this.selectedVertical === '' ||
               solution.vertical === this.selectedVertical;
-            
+
             return matchesSearch && matchesIndustry && matchesVertical;
           });
         },
@@ -190,21 +186,21 @@
       <div class="layout-content-container">
         <!-- Header -->
         <section class="mb-12 text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-[#111418] sm:text-5xl">Solutions</h1>
+          <h1 class="text-4xl font-bold tracking-tight text-[#111418] sm:text-5xl  font-['Noto_Serif']">Solutions</h1>
           <p class="mt-4 text-lg leading-8 text-gray-600">Discover our comprehensive portfolio of solutions across industries</p>
         </section>
 
         <!-- Filters Section -->
         <section class="mb-12">
           <!-- Search -->
-          <div class="max-w-xl mx-auto mb-6">
+          <div class="max-w-6xl mx-auto mb-6">
             <div class="relative">
               <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
               <input
                 type="text"
                 x-model="searchQuery"
                 placeholder="Search solutions..."
-                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full h-12 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
             </div>
           </div>
@@ -214,7 +210,7 @@
             <div class="flex-1">
               <select
                 x-model="selectedIndustry"
-                class="w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full h-12 pl-3 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="">All Industries</option>
                 <template x-for="(industry, key) in industries" :key="key">
@@ -225,7 +221,7 @@
             <div class="flex-1">
               <select
                 x-model="selectedVertical"
-                class="w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full h-12 pl-3 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 :disabled="!selectedIndustry"
               >
                 <option value="">All Verticals</option>
