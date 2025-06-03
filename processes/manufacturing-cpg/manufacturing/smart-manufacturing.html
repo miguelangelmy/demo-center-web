@@ -32,180 +32,182 @@
 
         <main class="flex-1">
             <!-- Enhanced Breadcrumb -->
-            <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-16 sm:py-20 md:py-24">
+            <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
                 <div class="max-w-6xl mx-auto px-6 sm:px-10">
-                    <div class="flex flex-col gap-6">
-                        <nav class="flex" aria-label="Breadcrumb">
-                            <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                                <li class="inline-flex items-center">
-                                    <a href="../../../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white transition-colors">
-                                        <span class="material-symbols-outlined mr-2">home</span>
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="flex items-center">
-                                        <span class="material-symbols-outlined text-slate-400 mx-1 breadcrumb-chevron">chevron_right</span>
-                                        <a href="../../../industries/index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Industries</a>
+                    <nav class="flex py-4" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center">
+                                <a href="../../../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined mr-2">home</span>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <a href="../../../industries/index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Industries</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <a href="../../../industries/manufacturing-cpg/index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Manufacturing & CPG</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <a href="../../../industries/manufacturing-cpg/manufacturing/index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Manufacturing</a>
+                                </div>
+                            </li>
+                            <li aria-current="page">
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <span class="ml-1 text-sm font-medium text-slate-400">Smart Manufacturing Process</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div
+                class="bg-gradient-to-b from-slate-900 to-slate-800 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-1 justify-center py-8">
+                <!-- Title and Description with Blue Background -->
+                <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-6 sm:py-6 md:py-6">
+                    <h1 class="text-white text-4xl sm:text-5xl md:text-6xl page-title leading-tight tracking-tight">Smart
+                        Manufacturing Process</h1>
+                    <p class="text-xl text-slate-300 max-w-3xl">Optimize manufacturing operations through digitalization and
+                        automation, integrating IoT devices, AI-driven analytics, and real-time monitoring for improved efficiency
+                        and quality.</p>
+                </div>
+            </div>
+            <div class="layout-container flex h-full grow flex-col">
+                <div class="px-4 sm:px-8 md:px-16 lg:px-24 flex flex-1 justify-center py-8">
+                    <div class="layout-content-container flex flex-col max-w-5xl flex-1">
+                        <!-- Process Flow -->
+                        <section class="mb-12">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                                <!-- Node 1 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center mb-4 relative border-2 border-sky-200 p-2 shadow-lg">
+                                        <img src="../../../images/processes/manufacturing/data-collection.jpg" alt="IoT sensors collecting data" class="w-full h-full object-cover rounded-full"/>
+                                        <!-- Connecting Line -->
+                                        <div class="absolute h-0.5 bg-sky-200 w-full right-0 top-1/2 -translate-y-1/2 translate-x-full hidden lg:block"></div>
+                                        <!-- Mobile Arrow -->
+                                        <span class="material-symbols-outlined text-sky-200 text-4xl absolute -bottom-8 rotate-90 lg:hidden">arrow_forward</span>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="flex items-center">
-                                        <span class="material-symbols-outlined text-slate-400 mx-1 breadcrumb-chevron">chevron_right</span>
-                                        <a href="../../../industries/manufacturing-cpg/index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Manufacturing & CPG</a>
+                                    <h3 class="text-slate-900 font-semibold mb-2">Data Collection</h3>
+                                    <p class="text-slate-600 text-sm">IoT sensors and devices collect real-time production data</p>
+                                </div>
+
+                                <!-- Node 2 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center mb-4 relative border-2 border-sky-200 p-2 shadow-lg">
+                                        <img src="../../../images/processes/manufacturing/monitoring.jpg" alt="Real-time monitoring dashboard" class="w-full h-full object-cover rounded-full"/>
+                                        <!-- Connecting Line -->
+                                        <div class="absolute h-0.5 bg-sky-200 w-full right-0 top-1/2 -translate-y-1/2 translate-x-full hidden lg:block"></div>
+                                        <!-- Mobile Arrow -->
+                                        <span class="material-symbols-outlined text-sky-200 text-4xl absolute -bottom-8 rotate-90 lg:hidden">arrow_forward</span>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="flex items-center">
-                                        <span class="material-symbols-outlined text-slate-400 mx-1 breadcrumb-chevron">chevron_right</span>
-                                        <a href="../../../industries/manufacturing-cpg/manufacturing/index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Manufacturing</a>
+                                    <h3 class="text-slate-900 font-semibold mb-2">Real-time Monitoring</h3>
+                                    <p class="text-slate-600 text-sm">Continuous monitoring of production metrics and KPIs</p>
+                                </div>
+
+                                <!-- Node 3 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center mb-4 relative border-2 border-sky-200 p-2 shadow-lg">
+                                        <img src="../../../images/processes/manufacturing/analytics.jpg" alt="AI analytics visualization" class="w-full h-full object-cover rounded-full"/>
+                                        <!-- Connecting Line -->
+                                        <div class="absolute h-0.5 bg-sky-200 w-full right-0 top-1/2 -translate-y-1/2 translate-x-full hidden lg:block"></div>
+                                        <!-- Mobile Arrow -->
+                                        <span class="material-symbols-outlined text-sky-200 text-4xl absolute -bottom-8 rotate-90 lg:hidden">arrow_forward</span>
                                     </div>
-                                </li>
-                                <li aria-current="page">
-                                    <div class="flex items-center">
-                                        <span class="material-symbols-outlined text-slate-400 mx-1 breadcrumb-chevron">chevron_right</span>
-                                        <span class="ml-1 text-sm font-medium text-slate-400">Smart Manufacturing Process</span>
+                                    <h3 class="text-slate-900 font-semibold mb-2">Analysis & Insights</h3>
+                                    <p class="text-slate-600 text-sm">AI/ML powered analysis for predictive insights</p>
+                                </div>
+
+                                <!-- Node 4 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center mb-4 relative border-2 border-sky-200 p-2 shadow-lg">
+                                        <img src="../../../images/processes/manufacturing/optimization.jpg" alt="Automated manufacturing process" class="w-full h-full object-cover rounded-full"/>
                                     </div>
-                                </li>
-                            </ol>
-                        </nav>
-                        <h1 class="text-white text-4xl sm:text-5xl md:text-6xl page-title leading-tight tracking-tight">Smart Manufacturing Process</h1>
-                        <p class="text-xl text-slate-300 max-w-3xl">Optimize manufacturing operations through digitalization and automation, integrating IoT devices, AI-driven analytics, and real-time monitoring for improved efficiency and quality.</p>
+                                    <h3 class="text-slate-900 font-semibold mb-2">Process Optimization</h3>
+                                    <p class="text-slate-600 text-sm">Automated adjustments and optimizations</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Success Stories -->
+                        <section class="mb-12 bg-slate-50">
+                            <h2 class="text-slate-900 text-3xl sm:text-4xl section-title leading-tight tracking-tight mb-8">Success Stories</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <!-- Success Story Card 1 -->
+                                <a href="../../../success-stories/automotive-manufacturing-success.html" class="block">
+                                    <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                        <div class="h-48 rounded-lg overflow-hidden">
+                                            <img src="../../../images/processes/manufacturing/automotive-success.jpg" alt="Automotive manufacturing plant" class="w-full h-full object-cover"/>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-slate-900 text-lg font-semibold leading-tight">Global Automotive Manufacturer</h3>
+                                            <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Implemented smart manufacturing process resulting in 30% efficiency improvement and 25% reduction in downtime.</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- Success Story Card 2 -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <div class="h-48 rounded-lg overflow-hidden">
+                                        <img src="../../../images/processes/manufacturing/electronics-success.jpg" alt="Electronics manufacturing facility" class="w-full h-full object-cover"/>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-slate-900 text-lg font-semibold leading-tight">Electronics Manufacturer</h3>
+                                        <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Achieved 40% defect reduction and 20% increase in production throughput through IoT integration.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Use Cases -->
+                        <section class="mb-12">
+                            <h2 class="text-slate-900 text-3xl sm:text-4xl section-title leading-tight tracking-tight mb-8">Use Cases</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Use Case Card 1 -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                        <span class="material-symbols-outlined">settings_suggest</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-slate-900 text-lg font-semibold leading-tight">Predictive Maintenance</h3>
+                                        <p class="text-slate-600 text-sm font-normal leading-normal mt-2">AI-driven maintenance scheduling to prevent equipment failures and minimize downtime.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Use Case Card 2 -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                        <span class="material-symbols-outlined">inventory_2</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-slate-900 text-lg font-semibold leading-tight">Inventory Optimization</h3>
+                                        <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Real-time inventory tracking and automated reordering based on demand prediction.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Use Case Card 3 -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
+                                        <span class="material-symbols-outlined">verified</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-slate-900 text-lg font-semibold leading-tight">Quality Control</h3>
+                                        <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Computer vision and AI for automated quality inspection and defect detection.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
-
-            <!-- Process Flow -->
-            <section class="py-8 sm:py-10 md:py-12 px-6 sm:px-10">
-                <div class="max-w-7xl mx-auto">
-                    <!-- Process Graph -->
-                    <div class="relative">
-                        <!-- Process Nodes -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                            <!-- Node 1 -->
-                            <div class="flex flex-col items-center text-center">
-                                <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center mb-4 relative border-2 border-sky-200 p-2 shadow-lg">
-                                    <img src="../../../images/processes/manufacturing/data-collection.jpg" alt="IoT sensors collecting data" class="w-full h-full object-cover rounded-full"/>
-                                    <!-- Connecting Line -->
-                                    <div class="absolute h-0.5 bg-sky-200 w-full right-0 top-1/2 -translate-y-1/2 translate-x-full hidden lg:block"></div>
-                                    <!-- Mobile Arrow -->
-                                    <span class="material-symbols-outlined text-sky-200 text-4xl absolute -bottom-8 rotate-90 lg:hidden">arrow_forward</span>
-                                </div>
-                                <h3 class="text-slate-900 font-semibold mb-2">Data Collection</h3>
-                                <p class="text-slate-600 text-sm">IoT sensors and devices collect real-time production data</p>
-                            </div>
-
-                            <!-- Node 2 -->
-                            <div class="flex flex-col items-center text-center">
-                                <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center mb-4 relative border-2 border-sky-200 p-2 shadow-lg">
-                                    <img src="../../../images/processes/manufacturing/monitoring.jpg" alt="Real-time monitoring dashboard" class="w-full h-full object-cover rounded-full"/>
-                                    <!-- Connecting Line -->
-                                    <div class="absolute h-0.5 bg-sky-200 w-full right-0 top-1/2 -translate-y-1/2 translate-x-full hidden lg:block"></div>
-                                    <!-- Mobile Arrow -->
-                                    <span class="material-symbols-outlined text-sky-200 text-4xl absolute -bottom-8 rotate-90 lg:hidden">arrow_forward</span>
-                                </div>
-                                <h3 class="text-slate-900 font-semibold mb-2">Real-time Monitoring</h3>
-                                <p class="text-slate-600 text-sm">Continuous monitoring of production metrics and KPIs</p>
-                            </div>
-
-                            <!-- Node 3 -->
-                            <div class="flex flex-col items-center text-center">
-                                <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center mb-4 relative border-2 border-sky-200 p-2 shadow-lg">
-                                    <img src="../../../images/processes/manufacturing/analytics.jpg" alt="AI analytics visualization" class="w-full h-full object-cover rounded-full"/>
-                                    <!-- Connecting Line -->
-                                    <div class="absolute h-0.5 bg-sky-200 w-full right-0 top-1/2 -translate-y-1/2 translate-x-full hidden lg:block"></div>
-                                    <!-- Mobile Arrow -->
-                                    <span class="material-symbols-outlined text-sky-200 text-4xl absolute -bottom-8 rotate-90 lg:hidden">arrow_forward</span>
-                                </div>
-                                <h3 class="text-slate-900 font-semibold mb-2">Analysis & Insights</h3>
-                                <p class="text-slate-600 text-sm">AI/ML powered analysis for predictive insights</p>
-                            </div>
-
-                            <!-- Node 4 -->
-                            <div class="flex flex-col items-center text-center">
-                                <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center mb-4 relative border-2 border-sky-200 p-2 shadow-lg">
-                                    <img src="../../../images/processes/manufacturing/optimization.jpg" alt="Automated manufacturing process" class="w-full h-full object-cover rounded-full"/>
-                                </div>
-                                <h3 class="text-slate-900 font-semibold mb-2">Process Optimization</h3>
-                                <p class="text-slate-600 text-sm">Automated adjustments and optimizations</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Success Stories -->
-            <section class="py-8 sm:py-10 md:py-12 px-6 sm:px-10 bg-slate-50">
-                <div class="max-w-6xl mx-auto">
-                    <h2 class="text-slate-900 text-3xl sm:text-4xl section-title leading-tight tracking-tight mb-8">Success Stories</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Success Story Card 1 -->
-                        <a href="../../../success-stories/automotive-manufacturing-success.html" class="block">
-                            <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="h-48 rounded-lg overflow-hidden">
-                                    <img src="../../../images/processes/manufacturing/automotive-success.jpg" alt="Automotive manufacturing plant" class="w-full h-full object-cover"/>
-                                </div>
-                                <div>
-                                    <h3 class="text-slate-900 text-lg font-semibold leading-tight">Global Automotive Manufacturer</h3>
-                                    <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Implemented smart manufacturing process resulting in 30% efficiency improvement and 25% reduction in downtime.</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- Success Story Card 2 -->
-                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div class="h-48 rounded-lg overflow-hidden">
-                                <img src="../../../images/processes/manufacturing/electronics-success.jpg" alt="Electronics manufacturing facility" class="w-full h-full object-cover"/>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Electronics Manufacturer</h3>
-                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Achieved 40% defect reduction and 20% increase in production throughput through IoT integration.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Use Cases -->
-            <section class="py-8 sm:py-10 md:py-12 px-6 sm:px-10">
-                <div class="max-w-6xl mx-auto">
-                    <h2 class="text-slate-900 text-3xl sm:text-4xl section-title leading-tight tracking-tight mb-8">Use Cases</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Use Case Card 1 -->
-                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
-                                <span class="material-symbols-outlined">settings_suggest</span>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Predictive Maintenance</h3>
-                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">AI-driven maintenance scheduling to prevent equipment failures and minimize downtime.</p>
-                            </div>
-                        </div>
-
-                        <!-- Use Case Card 2 -->
-                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
-                                <span class="material-symbols-outlined">inventory_2</span>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Inventory Optimization</h3>
-                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Real-time inventory tracking and automated reordering based on demand prediction.</p>
-                            </div>
-                        </div>
-
-                        <!-- Use Case Card 3 -->
-                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
-                                <span class="material-symbols-outlined">verified</span>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Quality Control</h3>
-                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Computer vision and AI for automated quality inspection and defect detection.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
 
         <div id="footer-placeholder"></div>
