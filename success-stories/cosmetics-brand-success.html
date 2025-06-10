@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900" rel="stylesheet" as="style" onload="this.rel='stylesheet'"/>
+    <title>NTT DATA Industry Demo Center</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <link href="../styles/main.css" rel="stylesheet"/>
+</head>
+<body class="bg-default">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div id="header-placeholder"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('header-placeholder').innerHTML = data;
+                    });
+
+                fetch('/footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    });
+            });
+        </script>
+
+        <main class="flex-1">
+            <!-- Enhanced Breadcrumb -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+                <div class="max-w-6xl mx-auto px-6 sm:px-10">
+                    <nav class="flex py-4" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center">
+                                <a href="../../../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined mr-2">home</span>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <a href="../../../industries/index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Industries</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <a href="../../../industries/manufacturing-cpg/index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Manufacturing & CPG</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <a href="../../../industries/manufacturing-cpg/consumer-packaged-goods/index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Consumer Packaged Goods</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <a href="../../../processes/manufacturing-cpg/cpg/smart-order-management.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Smart Order Management</a>
+                                </div>
+                            </li>
+                            <li aria-current="page">
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <span class="ml-1 text-sm font-medium text-slate-400">Cosmetics Brand Transformation</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <img src="../images/processes/cpg/success_4.jpeg" alt="Order management system"/>
+                <div class="content">
+                    <div class="max-w-6xl mx-auto px-6 sm:px-10 w-full">
+                        <div class="max-w-3xl">
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl page-title text-white leading-tight tracking-tight mb-6">Global Cosmetics Brand Order Management Transformation</h1>
+                            <p class="text-xl text-slate-200">How a leading cosmetics brand achieved unprecedented efficiency improvements through smart order management implementation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge Section -->
+            <section class="py-16 px-6 sm:px-10">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="rounded-2xl overflow-hidden section-image">
+                            <img src="../images/processes/cpg/order_capture.jpg" alt="Order validation process" class="w-full h-full object-cover"/>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-3xl section-title text-slate-900">The Challenge</h2>
+                            <div class="prose text-slate-600">
+                                <p>The cosmetics brand was facing increasing pressure to improve order management efficiency while maintaining high customer satisfaction in a competitive market. Their existing order management processes were manual and siloed, leading to errors, delays, and poor visibility into order status.</p>
+                                <p>With complex order flows across multiple channels, they needed a solution that could streamline Customer Order Capture, Order Validation, and Order Issue Management processes, reducing human error and providing real-time insights.</p>
+                                <p>Additionally, they were experiencing challenges with order tracking, inventory accuracy, and timely resolution of order issues, resulting in customer complaints and lost sales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solution Section -->
+            <section class="py-16 px-6 sm:px-10 bg-slate-50">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-3xl section-title text-slate-900">The Solution</h2>
+                            <div class="prose text-slate-600">
+                                <p>NTT DATA implemented a comprehensive smart order management solution that integrated Customer Order Capture, Order Validation, and Order Issue Management processes. This system provided end-to-end visibility and real-time tracking of orders.</p>
+                                <p>We deployed AI-powered algorithms for automated order validation that could detect and resolve issues in real-time, reducing manual intervention. The solution also included intelligent order routing and prioritization based on business rules.</p>
+                                <p>A centralized order management dashboard was created, enabling real-time monitoring of order status, inventory levels, and performance metrics. Smart analytics provided predictive insights for demand forecasting and inventory optimization.</p>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden section-image">
+                            <img src="../images/processes/cpg/order_issue_management.jpg" alt="Order issue management" class="w-full h-full object-cover"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section class="py-16 px-6 sm:px-10">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="rounded-2xl overflow-hidden lg:h-96">
+                            <img src="../images/processes/cpg/success_3.jpg" alt="Order management achievements" class="w-full h-full object-cover"/>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-3xl section-title text-slate-900">Key Achievements</h2>
+                            <div class="prose text-slate-600">
+                                <ul class="space-y-4">
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[#1672ce] bg-sky-100 p-1 rounded-full mt-1">
+                                            <span class="material-symbols-outlined text-xl">trending_up</span>
+                                        </span>
+                                        <div>
+                                            <strong class="block text-slate-900">35% Order Processing Efficiency Improvement</strong>
+                                            <p>Streamlined order management processes and automated workflows resulted in significant efficiency gains across all order channels.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[#1672ce] bg-sky-100 p-1 rounded-full mt-1">
+                                            <span class="material-symbols-outlined text-xl">timer</span>
+                                        </span>
+                                        <div>
+                                            <strong class="block text-slate-900">40% Reduction in Order Processing Time</strong>
+                                            <p>Automated order validation and real-time tracking dramatically reduced order processing times.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[#1672ce] bg-sky-100 p-1 rounded-full mt-1">
+                                            <span class="material-symbols-outlined text-xl">inventory</span>
+                                        </span>
+                                        <div>
+                                            <strong class="block text-slate-900">25% Inventory Accuracy Improvement</strong>
+                                            <p>Real-time inventory integration and demand forecasting optimized stock levels and reduced stockouts.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[#1672ce] bg-sky-100 p-1 rounded-full mt-1">
+                                            <span class="material-symbols-outlined text-xl">verified</span>
+                                        </span>
+                                        <div>
+                                            <strong class="block text-slate-900">30% Reduction in Order Errors</strong>
+                                            <p>AI-powered order validation and automated workflows significantly reduced order errors and improved customer satisfaction.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+    </div>
+</body>
+</html>
