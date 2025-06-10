@@ -16,13 +16,13 @@
         <div id="header-placeholder"></div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                fetch('../../../header.html')
+                fetch('/header.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('header-placeholder').innerHTML = data;
                     });
 
-                fetch('../../../footer.html')
+                fetch('/footer.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('footer-placeholder').innerHTML = data;
@@ -32,120 +32,100 @@
 
         <main class="flex-1">
             <!-- Enhanced Breadcrumb -->
-            <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-16 sm:py-20 md:py-24">
+            <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
                 <div class="max-w-6xl mx-auto px-6 sm:px-10">
-                    <div class="flex flex-col gap-6">
-                        <nav class="flex" aria-label="Breadcrumb">
-                            <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                                <li class="inline-flex items-center">
-                                    <a href="../../../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white transition-colors">
-                                        <span class="material-symbols-outlined mr-2">home</span>
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="flex items-center">
-                                        <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
-                                        <a href="../../index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Industries</a>
+                    <nav class="flex py-4" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center">
+                                <a href="../../../home.html" class="inline-flex items-center text-sm font-medium text-slate-200 hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined mr-2">home</span>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <a href="../../index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Industries</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <a href="../index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Manufacturing & CPG</a>
+                                </div>
+                            </li>
+                            <li aria-current="page">
+                                <div class="flex items-center">
+                                    <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
+                                    <span class="ml-1 text-sm font-medium text-slate-400">Manufacturing</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div
+                class="bg-gradient-to-b from-slate-900 to-slate-800 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-1 justify-center py-8">
+                <!-- Title and Description with Blue Background -->
+                <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-6 sm:py-6 md:py-6">
+                    <h1 class="text-white text-4xl sm:text-5xl md:text-6xl page-title leading-tight tracking-tight">Consumer Packaged Goods</h1>
+                    <p class="text-xl text-slate-300 max-w-3xl">Transform your CPG business with digital solutions for enhanced efficiency and consumer engagement.</p>
+                </div>
+            </div>
+
+            <div class="layout-container flex h-full grow flex-col">
+                <div class="px-4 sm:px-8 md:px-16 lg:px-24 flex flex-1 justify-center py-8">
+                    <div class="layout-content-container flex flex-col max-w-5xl flex-1">
+
+                        <!-- Processes Grid -->
+                        <section class="mb-12">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6">Covered processes</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <a href="../../../processes/manufacturing-cpg/manufacturing/smart-order-management.html" class="block">
+                                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                                        <div class="flex items-center mb-4">
+                                            <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">local_shipping</span>
+                                            <h3 class="text-xl font-semibold text-gray-900">Smart Order Management</h3>
+                                        </div>
+                                        <p class="text-gray-600">Optimization of order management activities and elimination of shipping inefficiencies thanks to Generative AI.</p>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="flex items-center">
-                                        <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
-                                        <a href="../index.html" class="ml-1 text-sm font-medium text-slate-200 hover:text-white transition-colors">Manufacturing & CPG</a>
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Features Section -->
+                        <section class="mb-12">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-white p-6 rounded-lg shadow-lg">
+                                    <div class="flex items-center mb-4">
+                                        <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">settings_suggest</span>
+                                        <h3 class="text-xl font-semibold text-gray-900">Predictive Maintenance</h3>
                                     </div>
-                                </li>
-                                <li aria-current="page">
-                                    <div class="flex items-center">
-                                        <span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>
-                                        <span class="ml-1 text-sm font-medium text-slate-400">Consumer Packaged Goods</span>
+                                    <p class="text-gray-600">AI-driven maintenance scheduling and equipment monitoring.</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-lg shadow-lg">
+                                    <div class="flex items-center mb-4">
+                                        <span class="material-symbols-outlined text-[#1672ce] text-3xl mr-3">inventory_2</span>
+                                        <h3 class="text-xl font-semibold text-gray-900">Inventory Management</h3>
                                     </div>
-                                </li>
-                            </ol>
-                        </nav>
-                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight">Consumer Packaged Goods Solutions</h1>
-                        <p class="text-xl text-slate-300 max-w-3xl">Transform your CPG business with digital solutions for enhanced efficiency and consumer engagement.</p>
+                                    <p class="text-gray-600">Real-time inventory tracking and automated supply chain optimization.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Call to Action -->
+                        <section class="bg-gray-50 rounded-xl p-8 text-center">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Operations?</h2>
+                            <p class="text-gray-600 mb-6">Contact us to learn more about our manufacturing solutions.</p>
+                            <button class="bg-[#1672ce] text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                Request a Demo
+                            </button>
+                        </section>
                     </div>
                 </div>
-            </section>
-
-            <!-- Solutions Grid -->
-            <section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10">
-                <div class="max-w-6xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Solution Card 1 -->
-                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
-                                <span class="material-symbols-outlined">inventory_2</span>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Supply Chain Optimization</h3>
-                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Streamline your supply chain with intelligent tracking and management solutions.</p>
-                            </div>
-                        </div>
-
-                        <!-- Solution Card 2 -->
-                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
-                                <span class="material-symbols-outlined">shopping_cart</span>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Consumer Insights</h3>
-                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Gain deeper understanding of consumer behavior with advanced analytics.</p>
-                            </div>
-                        </div>
-
-                        <!-- Solution Card 3 -->
-                        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div class="text-[#1672ce] h-10 w-10 flex items-center justify-center bg-sky-100 rounded-full">
-                                <span class="material-symbols-outlined">qr_code_scanner</span>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Product Traceability</h3>
-                                <p class="text-slate-600 text-sm font-normal leading-normal mt-2">Ensure product authenticity and tracking with blockchain and IoT solutions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Features Section -->
-            <section class="py-12 sm:py-16 md:py-20 px-6 sm:px-10 bg-slate-50">
-                <div class="max-w-6xl mx-auto">
-                    <h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-8">Key Features</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="flex gap-4">
-                            <div class="text-[#1672ce] h-10 w-10 flex-shrink-0">
-                                <span class="material-symbols-outlined">trending_up</span>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Demand Forecasting</h3>
-                                <p class="text-slate-600 mt-2">Predict market demand with AI-powered analytics.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="text-[#1672ce] h-10 w-10 flex-shrink-0">
-                                <span class="material-symbols-outlined">warehouse</span>
-                            </div>
-                            <div>
-                                <h3 class="text-slate-900 text-lg font-semibold leading-tight">Inventory Management</h3>
-                                <p class="text-slate-600 mt-2">Optimize inventory levels with real-time tracking and analytics.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section class="py-16 sm:py-20 md:py-24 px-6 sm:px-10">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h2 class="text-slate-900 text-3xl sm:text-4xl font-bold leading-tight tracking-tight">Transform Your CPG Business</h2>
-                    <p class="mt-4 text-slate-600 text-lg">Discover how our solutions can help you optimize operations and enhance consumer engagement.</p>
-                    <button class="mt-8 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#1672ce] hover:bg-sky-600 transition-colors duration-300">
-                        Contact Us
-                    </button>
-                </div>
-            </section>
+            </div>
         </main>
 
         <div id="footer-placeholder"></div>
