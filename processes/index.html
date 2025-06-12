@@ -25,7 +25,7 @@
         processes: [
           {
             id: 'smart-order-management',
-            title: 'Smart Order Management',
+            title: 'Smart Demand',
             description: 'End-to-end order management with real-time visibility and automation',
             industry: 'manufacturing-cpg',
             vertical: 'Consumer Packaged Goods',
@@ -34,8 +34,8 @@
             whitepapers: 1
           },
           {
-            id: 'smart-manufacturing',
-            title: 'Smart Manufacturing',
+            id: 'smart-product-engineering',
+            title: 'Smart Product Engineering',
             description: 'AI-powered manufacturing optimization and predictive maintenance',
             industry: 'manufacturing-cpg',
             vertical: 'Manufacturing',
@@ -122,6 +122,13 @@
 
         <!-- Filters Section -->
         <section class="mb-12">
+          <!-- Images Section -->
+          <div class="max-w-6xl mx-auto mb-6 flex flex-col items-center">
+            <img src="../images/processes/Agile Supply Chain.png" alt="Agile Supply Chain" class="mb-4 max-w-full h-auto">
+            <img src="../images/processes/Smart Demand Process.png" alt="Smart Demand Process" class="mb-4 max-w-full h-auto">
+            <img src="../images/processes/Smart Product Engineering.png" alt="Smart Product Engineering" class="max-w-full h-auto">
+          </div>
+
           <!-- Search -->
           <div class="max-w-6xl mx-auto mb-6">
             <div class="relative">
@@ -167,7 +174,7 @@
         <section class="mb-16">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <template x-for="process in filteredProcesses" :key="process.id">
-              <a :href="'./'+process.id+'/index.html'" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+              <a :href="process.id === 'smart-product-engineering' ? '../usecases/smart-product-engineering.html' : './'+process.id+'/index.html'" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
                 <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center" :style="'background-image: url('+process.image+')'"></div>
                 <div class="flex w-full @xl:w-3/5 grow flex-col items-start justify-center gap-3 p-6 @xl:p-8">
                   <h2 class="text-2xl font-semibold text-[#111418] leading-tight" x-text="process.title"></h2>
