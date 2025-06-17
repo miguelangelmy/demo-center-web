@@ -53,3 +53,120 @@
 </button>
 </div>
 </header>
+
+<!-- Dynamic Breadcrumb -->
+<script>
+  (function() {
+    const BREADCRUMB_STORAGE_KEY = 'nttDataBreadcrumb';
+
+    // Helper function to get page name from path
+    function getPageName(path) {
+      const pathToNameMap = {
+        '/home.html': 'Home',
+        '/industries': 'Industries',
+        '/processes/': 'Processes',
+        '/events.html': 'Events',
+        '/livinglab.html': 'Living Lab',
+        '/contactus.html': 'Contact Us'
+      };
+
+      // Check if path matches any known page
+      for (const key in pathToNameMap) {
+        if (path.startsWith(key)) {
+          return pathToNameMap[key];
+        }
+      }
+
+      // For sub-pages, extract the last directory name
+      const parts = path.split('/').filter(part => part !== '');
+      if (parts.length > 0) {
+        return parts[parts.length - 1].replace('.html', '').replace('-', ' ');
+      }
+
+      return 'Unknown';
+    }
+
+    // Initialize breadcrumb from storage or with home page
+    function initBreadcrumb() {
+      let breadcrumb = JSON.parse(localStorage.getItem(BREADCRUMB_STORAGE_KEY));
+      if (!breadcrumb || breadcrumb.length === 0) {
+        breadcrumb = [{ name: 'Home', path: '/home.html' }];
+      }
+
+      updateBreadcrumbDisplay(breadcrumb);
+    }
+
+    // Update breadcrumb display
+    function updateBreadcrumbDisplay(breadcrumb) {
+      const breadcrumbContainer = document.createElement('div');
+      breadcrumbContainer.className = 'bg-gradient-to-b from-slate-900 to-slate-800 text-white';
+      breadcrumbContainer.innerHTML = `
+        <div class="max-w-6xl mx-auto px-6 sm:px-10">
+          <nav class="flex py-4" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+              ${breadcrumb.map((item, index) => `
+                <li class="${index === breadcrumb.length - 1 ? 'aria-current="page"' : ''}">
+                  <div class="flex items-center">
+                    ${index > 0 ? `<span class="material-symbols-outlined text-slate-400 mx-1" style="font-size: 1.25rem;">chevron_right</span>` : ''}
+                    <a href="${item.path}" class="ml-1 text-sm font-medium text-slate-400 hover:text-white transition-colors">${item.name}</a>
+                  </div>
+                </li>
+              `).join('')}
+            </ol>
+          </nav>
+        </div>
+      `;
+
+      // Insert breadcrumb before the header
+      const existingBreadcrumb = document.querySelector('.breadcrumb-container');
+      if (existingBreadcrumb) {
+        existingBreadcrumb.replaceWith(breadcrumbContainer);
+      } else {
+        document.querySelector('body').insertBefore(breadcrumbContainer, document.querySelector('header'));
+      }
+
+      // Add class for easy selection
+      breadcrumbContainer.classList.add('breadcrumb-container');
+    }
+
+    // Update breadcrumb when navigation occurs
+    function updateBreadcrumbOnNavigation() {
+      // Get current path
+      const currentPath = window.location.pathname;
+
+      // Get current breadcrumb from storage
+      let breadcrumb = JSON.parse(localStorage.getItem(BREADCRUMB_STORAGE_KEY)) || [];
+
+      // Get current page name
+      const currentPageName = getPageName(currentPath);
+
+      // If current page is not already the last item in breadcrumb, add it
+      if (breadcrumb.length === 0 || breadcrumb[breadcrumb.length - 1].name !== currentPageName) {
+        breadcrumb.push({ name: currentPageName, path: currentPath });
+
+        // Save updated breadcrumb to storage
+        localStorage.setItem(BREADCRUMB_STORAGE_KEY, JSON.stringify(breadcrumb));
+
+        // Update display
+        updateBreadcrumbDisplay(breadcrumb);
+      }
+    }
+
+    // Initialize breadcrumb on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      initBreadcrumb();
+      updateBreadcrumbOnNavigation();
+    });
+
+    // Update breadcrumb when links are clicked
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('a')) {
+        const target = e.target.closest('a');
+        if (target.href.includes(document.location.origin)) {
+          // Only handle internal links
+          setTimeout(updateBreadcrumbOnNavigation, 100); // Wait for navigation to complete
+        }
+      }
+    });
+  })();
+</script>
