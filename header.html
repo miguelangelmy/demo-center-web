@@ -29,7 +29,7 @@
     <span x-text="language"></span>
     <span class="material-symbols-outlined text-base" x-bind:class="{ 'rotate-180': open }">expand_more</span>
   </button>
-  <div x-show="open" 
+  <div x-show="open"
        @click.away="open = false"
        x-transition:enter="transition ease-out duration-100"
        x-transition:enter-start="transform opacity-0 scale-95"
@@ -39,18 +39,15 @@
        x-transition:leave-end="transform opacity-0 scale-95"
        class="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
     <div class="py-1" role="menu" aria-orientation="vertical">
-      <a href="#" @click.prevent="language = 'English'; open = false" 
+      <a href="#" @click.prevent="language = 'English'; open = false"
          class="block px-4 py-2 text-sm text-slate-700 hover:bg-gray-100 hover:text-[#1672ce]" role="menuitem">English</a>
-      <a href="#" @click.prevent="language = 'Español'; open = false" 
+      <a href="#" @click.prevent="language = 'Español'; open = false"
          class="block px-4 py-2 text-sm text-slate-700 hover:bg-gray-100 hover:text-[#1672ce]" role="menuitem">Español</a>
-      <a href="#" @click.prevent="language = '日本語'; open = false" 
+      <a href="#" @click.prevent="language = '日本語'; open = false"
          class="block px-4 py-2 text-sm text-slate-700 hover:bg-gray-100 hover:text-[#1672ce]" role="menuitem">日本語</a>
     </div>
   </div>
 </div>
-<button class="hidden md:flex min-w-[90px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-gray-100 text-slate-800 text-sm font-semibold leading-normal tracking-[0.015em] hover:bg-gray-200 transition-colors">
-<span class="truncate">Log In</span>
-</button>
 <button class="md:hidden text-slate-700">
 <span class="material-symbols-outlined">menu</span>
 </button>
