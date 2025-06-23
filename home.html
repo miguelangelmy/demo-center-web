@@ -70,7 +70,7 @@
         {
             title: 'Latest AI Solutions Demo',
             description: 'Experience our newest AI-powered solutions that are transforming businesses across industries. See real-world applications and measurable results.',
-            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCaaqIITvIBGQTo9nzsrLDXGN82VfUdc4sWad5cX_YOAsKPZ6xvsblWS3fdcb4dmrBaIoc95hezkeeM8hrz5i1-sEeGoycdZAA_Np87Lzqn73iDd3KgzG9iZU-f-fQUjnrVnYz46fRX3YtQ7D-fRum-Al1t9wQFggWnBzo9PCyqRzoMYjVSPSFl5fwCqjbZLfllQgulk4rajZheRbG3pqLZ6Ek1v53rBS8DXVU-Y9MjMJa4xKsmB5JOcd8Zx5NfPhVTfZe8bOeyhUM',
+            video: 'video/Cosméticos_2.mp4',
             cta: 'Watch Demo'
         },
         {
@@ -112,11 +112,21 @@
                     'opacity-0 -translate-x-full': (activeSlide === 0 && index === slides.length - 1) || (activeSlide > index && !(activeSlide === slides.length - 1 && index === 0))
                 }"
             >
-                <!-- Background Image with Gradient -->
-                <div 
-                    class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-                    :style="'background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(' + slide.image + ')'"
-                ></div>
+                <!-- Background Video or Image -->
+                <template x-if="slide.video">
+                    <div class="absolute inset-0">
+                        <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted>
+                            <source :src="slide.video" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-black opacity-50"></div>
+                    </div>
+                </template>
+                <template x-if="slide.image">
+                    <div
+                        class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+                        :style="'background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(' + slide.image + ')'"
+                    ></div>
+                </template>
                 
                 <!-- Content -->
                 <div class="relative h-full px-6 sm:px-10 flex flex-col items-center justify-center text-center">
