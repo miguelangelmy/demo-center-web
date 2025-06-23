@@ -68,10 +68,13 @@
             cta: 'Request a Demo'
         },
         {
-            title: 'Latest AI Solutions Demo',
-            description: 'Experience our newest AI-powered solutions that are transforming businesses across industries. See real-world applications and measurable results.',
+            title: 'Global Cosmetics Brand Order Management Transformation',
+            description: 'How a leading cosmetics brand achieved unprecedented efficiency improvements with our Smart Orders Management solution.',
             video: 'video/Cosméticos_2.mp4',
-            cta: 'Watch Demo'
+            cta: {
+                text: 'Watch Demo',
+                link: 'success-stories/cosmetics-brand-success.html'
+            }
         },
         {
             title: 'Innovation Spotlight',
@@ -139,11 +142,21 @@
                             class="mt-6 text-slate-100 text-lg @[480px]:text-xl font-normal leading-relaxed max-w-2xl mx-auto"
                             x-text="slide.description"
                         ></p>
-                        <button 
-                            class="mt-10 flex min-w-[180px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 @[480px]:h-14 @[480px]:px-8 bg-[#1672ce] text-white text-base @[480px]:text-lg font-semibold leading-normal tracking-tight shadow-lg hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1672ce] transition-transform duration-150 ease-in-out hover:scale-105 mx-auto"
-                        >
-                            <span class="truncate" x-text="slide.cta"></span>
-                        </button>
+                        <template x-if="typeof slide.cta === 'string'">
+                            <button
+                                class="mt-10 flex min-w-[180px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 @[480px]:h-14 @[480px]:px-8 bg-[#1672ce] text-white text-base @[480px]:text-lg font-semibold leading-normal tracking-tight shadow-lg hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1672ce] transition-transform duration-150 ease-in-out hover:scale-105 mx-auto"
+                            >
+                                <span class="truncate" x-text="slide.cta"></span>
+                            </button>
+                        </template>
+                        <template x-if="typeof slide.cta === 'object'">
+                            <a
+                                :href="slide.cta.link"
+                                class="mt-10 flex min-w-[180px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 @[480px]:h-14 @[480px]:px-8 bg-[#1672ce] text-white text-base @[480px]:text-lg font-semibold leading-normal tracking-tight shadow-lg hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1672ce] transition-transform duration-150 ease-in-out hover:scale-105 mx-auto no-underline"
+                            >
+                                <span class="truncate" x-text="slide.cta.text"></span>
+                            </a>
+                        </template>
                     </div>
                 </div>
             </div>
