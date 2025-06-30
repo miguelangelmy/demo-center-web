@@ -98,7 +98,7 @@
 </header>
 
 <!-- Dynamic Breadcrumb -->
-<script>
+<!-- <script>
   (function() {
     const BREADCRUMB_STORAGE_KEY = 'nttDataBreadcrumb';
 
@@ -196,10 +196,10 @@
     }
 
     // Initialize breadcrumb on page load
-    // document.addEventListener('DOMContentLoaded', function() {
-    //   initBreadcrumb();
-    //   updateBreadcrumbOnNavigation();
-    // });
+    document.addEventListener('DOMContentLoaded', function() {
+      initBreadcrumb();
+      updateBreadcrumbOnNavigation();
+    });
 
     // Update breadcrumb when links are clicked
     document.addEventListener('click', function(e) {
@@ -212,7 +212,7 @@
       }
     });
   })();
-</script>
+</script> -->
 <div class="page-root">
 <div class="layout-container flex h-full grow flex-col">
 <main class="flex-1">
