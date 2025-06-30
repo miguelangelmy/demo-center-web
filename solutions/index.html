@@ -394,7 +394,7 @@
         <section class="mb-16">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <template x-for="solution in filteredSolutions" :key="solution.id">
-              <a :href="'./'+solution.id+'/index.html'" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+              <a :href="'#'" class="group flex flex-col @xl:flex-row items-stretch justify-start rounded-xl shadow-lg bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
                 <div class="w-full @xl:w-2/5 aspect-video bg-cover bg-center" :style="'background-image: url('+solution.image+')'"></div>
                 <div class="flex w-full @xl:w-3/5 grow flex-col items-start justify-center gap-3 p-6 @xl:p-8">
                   <h2 class="text-2xl font-semibold text-[#111418] leading-tight" x-text="solution.title"></h2>
